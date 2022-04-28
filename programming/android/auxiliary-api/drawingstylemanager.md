@@ -54,7 +54,7 @@ There are 8 preset drawing styles.
 
 ## createDrawingStyle
 
-Create a user-defined `DrawingStyle` instance.
+Create a user-defined `DrawingStyle` and get the style ID.
 
 ```java
 public static int createDrawingStyle(int strokeColor, float strokeWidth, int fillColor, int textColor, int fontSize, String fontFamily);
@@ -72,5 +72,5 @@ public static int createDrawingStyle(int strokeColor, float strokeWidth, int fil
 **Code Snippet**
 
 ```java
-DrawingStyle drawingStyle = dceCameraView.createDrawingStyle(0xff00ff00,2,0xff00ff00,0xff00ff00,12,"sans-serif")
+int myStyleId = styleManager.createDrawingStyle(0xff00ff00,2,0xff00ff00,0xff00ff00,12,"sans-serif")
 ```

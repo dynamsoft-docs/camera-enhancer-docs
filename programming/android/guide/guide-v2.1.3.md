@@ -45,7 +45,7 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
 
 #### Local Binary Dependency
 
-1. Go to the **Libs** folder in the installation package, copy the file `DynamsoftCameraEnhancerAndroid.aar` and `DynamsoftCoreAndroid.aar` to the target directory `HelloWorld\app\libs`
+1. Copy the file `[INSTALLATION FOLDER]\Lib\DynamsoftCameraEnhancerAndroid.aar` to the target directory `HelloWorld\app\libs`
 
 2. Open the file `HelloWorld\app\build.gradle`, and add reference in the dependencies:
 
@@ -61,7 +61,6 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
 
     ```java
     import com.dynamsoft.dce.*;
-    import com.dynamsoft.core.*;
     ```
 
 #### Remote Binary Dependency
@@ -73,9 +72,6 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
         maven {
             url "https://download2.dynamsoft.com/maven/dce/aar"
         }
-        maven {
-            url "https://download2.dynamsoft.com/maven/core/aar"
-        }
     }
     ```
 
@@ -84,7 +80,6 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
     ```groovy
     dependencies {
         implementation 'com.dynamsoft:dynamsoftcameraenhancer:{version-number}@aar'
-        implementation 'com.dynamsoft:dynamsoftcore:{version-number}@aar'
     }
     ```
 
