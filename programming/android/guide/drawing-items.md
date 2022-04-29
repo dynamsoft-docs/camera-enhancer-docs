@@ -127,3 +127,5 @@ Apart from the system-defined items, you can add your personal defined UI elemen
    // To add the DrawingItems to the imageEditorView
    // imageEditorView.getDrawingLayer(DCEDrawingLayer.DDN_LAYER_ID).addDrawingItems(drawingItems);
    ```
+
+&nbsp;
