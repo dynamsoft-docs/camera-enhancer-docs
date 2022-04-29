@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Guide on Android
-description: This is the documentation - Guide on Android page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Guide on Android
+title: Dynamsoft Camera Enhancer - Guide on iOS
+description: This is the documentation - Guide on iOS page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Guide on iOS
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-breadcrumbText: Android Guide
+breadcrumbText: iOS Guide
 ---
 
 # UI Configurations
@@ -26,9 +26,24 @@ breadcrumbText: Android Guide
 
 When `DynamsoftCameraEnhancer(DCE)` is used together with other Dynamsoft products like `DynamsoftBarcodeReader(DBR)` and `DynamsoftDocumentNormalizer(DDN)`, it can automatically draw highlight overlays (`QuadDrawingItem`) on the detected barcodes or documents. If you want to disable this feature, you can use the following code to stop drawing the highlights.
 
-```java
+```swift
 // Example: Remove all highlights on the barcodes
 editorView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID).setVisible(false);
+```
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+DCEDrawingLayer *dbrLayer = [imageEditorView getDrawingLayer:DCEDrawingLayer.DBR_LAYER_ID];
+drawingLayer
+```
+2. 
+```swift
+let dbrLayer = imageEditorView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID)
+dbrLayer.visible = false
 ```
 
 &nbsp;
@@ -39,32 +54,53 @@ You can change the style of the `DrawingItems` specifying a `DrawingStyleId`. Th
 
 To change the style of `DrawingItems` with preset `DrawingStyles`:
 
-```java
+```swift
 // You can change the drawing style of all DrawingItems in the layer.
 cameraView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID).setDrawingStyleId(DrawingStyleManager.DEFAULT_STYLE_ID_3);
 // You can also change the drawing style of a part of the DrawingItems.
 editorView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID).setDrawingStyleId(DrawingStyleManager.DEFAULT_STYLE_ID_3, EnumDrawingItemState.DIS_SELECTED, EnumDrawingItemMediaType.DIMT_QUADRILATERAL});
 ```
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+DCEDrawingLayer *dbrLayer = [imageEditorView getDrawingLayer:DCEDrawingLayer.DBR_LAYER_ID];
+// You can change the drawing style of all DrawingItems in the layer.
+[dbrLayer setDrawingStyleId:DrawingStyleManager.DEFAULT_STYLE_ID_3];
+// You can also change the drawing style of a part of the DrawingItems.
+[dbrLayer setDrawingStyleId:DrawingStyleManager.DEFAULT_STYLE_ID_3 state:EnumDrawingItemStateSelected mediaType:EnumDrawingItemMediaTypeRectangle];
+```
+2. 
+```swift
+let dbrLayer = imageEditorView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID)
+// You can change the drawing style of all DrawingItems in the layer.
+dbrLayer.setDrawingStyleId(DrawingStyleManager.DEFAULT_STYLE_ID_3)
+// You can also change the drawing style of a part of the DrawingItems.
+dbrLayer.setDrawingStyleId(DrawingStyleManager.DEFAULT_STYLE_ID_3, state:EnumDrawingItemStateSelected, mediaType:EnumDrawingItemMediaTypeRectangle)
+```
+
 List of all available preset styles:
 
-```java
+```objc
 // DrawingItems on DDN layer are using this style as default.
-public static int DEFAULT_STYLE_ID_1 = 1;
+#define DEFAULT_STYLE_ID_1 = 1;
 // DrawingItems on DBR layer are using this style as default.
-public static int DEFAULT_STYLE_ID_2 = 2;
+#define DEFAULT_STYLE_ID_2 = 2;
 // DrawingItems on DLR layer are using this style as default.
-public static int DEFAULT_STYLE_ID_3 = 3;
+#define DEFAULT_STYLE_ID_3 = 3;
 // DrawingItems on user defined layer are using this style as default.
-public static int DEFAULT_STYLE_ID_4 = 4;
+#define DEFAULT_STYLE_ID_4 = 4;
 // DrawingItems on DDN layer are using this style as default if they are selected.
-public static int SELECTED_STYLE_ID_1 = 5;
+#define SELECTED_STYLE_ID_1 = 5;
 // DrawingItems on DBR layer are using this style as default if they are selected.
-public static int SELECTED_STYLE_ID_2 = 6;
+#define SELECTED_STYLE_ID_2 = 6;
 // DrawingItems on DLR layer are using this style as default if they are selected.
-public static int SELECTED_STYLE_ID_3 = 7;
+#define SELECTED_STYLE_ID_3 = 7;
 // DrawingItems on user defined layer are using this style as default if they are selected.
-public static int SELECTED_STYLE_ID_4 = 8;
+#define SELECTED_STYLE_ID_4 = 8;
 ```
 
 <div align="center">
@@ -74,20 +110,46 @@ public static int SELECTED_STYLE_ID_4 = 8;
 
 If you want to set other styles to your UI elements, you can add your personal defined `DrawingStyles`.
 
-```java
+```swift
 // Create a new DrawingStyle via DrawingStyle manager and get the style ID of the new style.
 int myStyleId = DrawingStyleManager.createDrawingStyle(0xff00ff00,2,0xff00ff00,0xff00ff00,12,"sans-serif");
 // Assign the newly created style to the targeting DrawingItems.
 cameraView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID).setDrawingStyleId(myStyleId);
 ```
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+
+```
+2. 
+```swift
+
+```
+
 To modify the existing DrawingStyles:
 
-```java
+```swift
 // Get the style by ID.
 DrawingStyle myStyle = DrawingStyleManager.getDrawingStyle(myStyleId);
 // Modify the style.
 myStyle.strokeColor = 0xff00ff00;
+```
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+
+```
+2. 
+```swift
+
 ```
 
 &nbsp;
@@ -102,7 +164,7 @@ Apart from the system-defined items, you can add your personal defined UI elemen
 
 1. Create a new `QuadDrawingItem`.
 
-   ```java
+   ```swift
    // Create a new quadrilateral.
    com.dynamsoft.core.Quadrilateral newQuad = new Quadrilateral();
    // Add your code to assign the quad data.
@@ -111,9 +173,20 @@ Apart from the system-defined items, you can add your personal defined UI elemen
    DrawingItem item = new QuadDrawingItem(newQuad);
    ```
 
+   <div class="sample-code-prefix"></div>
+   >- Objective-C
+   >- Swift
+   >
+   >1. 
+   ```objc
+   ```
+   2. 
+   ```swift
+   ```
+
 2. Add the Created `DrawingItems` to the view.
 
-   ```java
+   ```swift
    // To display the drawingItems on the UI, you have to put the DrawingItems in a ArrayList.
    ArrayList<DrawingItem> drawingItems = new ArrayList<>();
    drawingItems.add(item);
@@ -123,6 +196,17 @@ Apart from the system-defined items, you can add your personal defined UI elemen
    cameraView.getDrawingLayer(DCEDrawingLayer.DDN_LAYER_ID).addDrawingItems(drawingItems);
    // To add the DrawingItems to the imageEditorView
    // imageEditorView.getDrawingLayer(DCEDrawingLayer.DDN_LAYER_ID).addDrawingItems(drawingItems);
+   ```
+
+   <div class="sample-code-prefix"></div>
+   >- Objective-C
+   >- Swift
+   >
+   >1. 
+   ```objc
+   ```
+   2. 
+   ```swift
    ```
 
 &nbsp;
