@@ -9,7 +9,7 @@ needGenerateH3Content: true
 breadcrumbText: Android Guide
 ---
 
-# Getting Started with Drawing Items
+# UI Configurations
 
 `DrawingItems` are the UI elements that user can create, modify and interact on the UI view. All the `DrawingItems` are contained in `DCEDrawingLayers` and finally displayed on the `DCECameraView` or `DCEImageEditorView`.
 
@@ -20,6 +20,8 @@ breadcrumbText: Android Guide
 
 ## Basic Usages
 
+&nbsp;
+
 ### Display Highlight Overlays
 
 When `DynamsoftCameraEnhancer(DCE)` is used together with other Dynamsoft products like `DynamsoftBarcodeReader(DBR)` and `DynamsoftDocumentNormalizer(DDN)`, it can automatically draw highlight overlays (`QuadDrawingItem`) on the detected barcodes or documents. If you want to disable this feature, you can use the following code to stop drawing the highlights.
@@ -28,6 +30,8 @@ When `DynamsoftCameraEnhancer(DCE)` is used together with other Dynamsoft produc
 // Example: Remove all highlights on the barcodes
 editorView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID).setVisible(false);
 ```
+
+&nbsp;
 
 ### Style Configuration
 
@@ -86,7 +90,11 @@ DrawingStyle myStyle = DrawingStyleManager.getDrawingStyle(myStyleId);
 myStyle.strokeColor = 0xff00ff00;
 ```
 
+&nbsp;
+
 ## Advanced Usages
+
+&nbsp;
 
 ### Add User Defined UI Elements
 
