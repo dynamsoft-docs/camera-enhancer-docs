@@ -80,9 +80,8 @@ Create a user-defined `DrawingStyle` instance.
 +(NSInteger)createDrawingStyle:(UIColor*)strokeColor
                    strokeWidth:(CGFloat)strokeWidth
                      fillColor:(UIColor*) fillColor
-                     textColor:(UIColor*) textColor 
-                      fontSize:(NSInteger)fontSize 
-                    fontFamily:(NString*) fontFamily;
+                     textColor:(UIColor*) textColor
+                          font:(UIFont*) font;
 
 ```
 
@@ -92,8 +91,7 @@ Create a user-defined `DrawingStyle` instance.
 `strokeWidth`: The width of the stroke.
 `fillColor`: The fill colour.
 `textColor`: The text colour.
-`fontSize`: The font size.
-`fontFamily`: The font family.
+`font`: The font style of the text.
 
 **Code Snippet**
 
@@ -103,9 +101,17 @@ Create a user-defined `DrawingStyle` instance.
 >
 >1. 
 ```objc
-NSInteger myStyleID = [DrawingStyleManager createDrawingStyle:0 strokeColor:strokeColor strokeWidth:1 fillColor:fillColor textColor:textColor fontSize:12 fontFamily:"Your-Targeting-Font-Family"];
+UIColor *strokeColour = [UIColor colorWithRed:0.2 green:0.3 blue:0.4 alpha:0.5];
+UIColor *fillColour = [UIColor colorWithRed:0.2 green:0.3 blue:0.4 alpha:0.5];
+UIColor *textColour = [UIColor colorWithRed:0.2 green:0.3 blue:0.4 alpha:0.5];
+UIFont *textFont = [UIFont systemFontOfSize:12.0];
+NSInteger myStyle = [DrawingStyleManager createDrawingStyle:strokeColour strokeWidth:2.0 fillColor:fillColour textColor:textColour font:textFont];
 ```
 2. 
 ```swift
-let myStyleID = DrawingStyleManager.createDrawingStyle(strokeColor, strokeWidth:1, fillColor:fillColor, textColor:textColor, fontSize:12, fontFamily:"Your-Targeting-Font-Family")
+let strokeColor = UIColor.init(red: 0.2, green: 0.3, blue: 0.4, alpha: 0.5)
+let fillColour = UIColor.init(red: 0.2, green: 0.3, blue: 0.4, alpha: 0.5)
+let textColor = UIColor.init(red: 0.2, green: 0.3, blue: 0.4, alpha: 0.5)
+let textFont = UIFont.systemFont(ofSize: 12, weight: UIFont.weight.light)
+let myStyleID = DrawingStyleManager.createDrawingStyle(strokeColor, strokeWidth:1, fillColor:fillColor, textColor:textColor, font: textFont)
 ```

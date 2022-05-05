@@ -36,12 +36,11 @@ The constructor of the `DrawingStyle`.
 
 ```objc
 - (instancetype)initWithId:(NSInteger)id
-               strokeColor:(UIColor)strokeColor
+               strokeColor:(UIColor*)strokeColor
                strokeWidth:(CGFloat)strokeWidth
-                 fillColor:(UIColor)fillColor
-                 textColor:(UIColor)textColor
-                  fontSize:(NSInteger)fontSize
-                fontFamily:(NSString*)fontFamily
+                 fillColor:(UIColor*)fillColor
+                 textColor:(UIColor*)textColor
+                      font:(UIFont*) font;
 ```
 
 **Remarks**

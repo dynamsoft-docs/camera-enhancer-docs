@@ -123,20 +123,28 @@ cameraView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID).setDrawingStyleId(mySty
 >
 >1. 
 ```objc
-
+UIColor *strokeColour = [UIColor colorWithRed:0.2 green:0.3 blue:0.4 alpha:0.5];
+UIColor *fillColour = [UIColor colorWithRed:0.2 green:0.3 blue:0.4 alpha:0.5];
+UIColor *textColour = [UIColor colorWithRed:0.2 green:0.3 blue:0.4 alpha:0.5];
+UIFont *textFont = [UIFont systemFontOfSize:12.0];
+NSInteger myStyle = [DrawingStyleManager createDrawingStyle:strokeColour strokeWidth:2.0 fillColor:fillColour textColor:textColour font:textFont];
 ```
 2. 
 ```swift
-
+let strokeColor = UIColor.init(red: 0.2, green: 0.3, blue: 0.4, alpha: 0.5)
+let fillColour = UIColor.init(red: 0.2, green: 0.3, blue: 0.4, alpha: 0.5)
+let textColor = UIColor.init(red: 0.2, green: 0.3, blue: 0.4, alpha: 0.5)
+let textFont = UIFont.systemFont(ofSize: 12, weight: UIFont.weight.light)
+let myStyleID = DrawingStyleManager.createDrawingStyle(strokeColor, strokeWidth:1, fillColor:fillColor, textColor:textColor, font: textFont)
 ```
 
 To modify the existing DrawingStyles:
 
 ```swift
 // Get the style by ID.
-DrawingStyle myStyle = DrawingStyleManager.getDrawingStyle(myStyleId);
+
 // Modify the style.
-myStyle.strokeColor = 0xff00ff00;
+
 ```
 
 <div class="sample-code-prefix"></div>
