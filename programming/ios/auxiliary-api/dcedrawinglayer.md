@@ -21,10 +21,8 @@ The layers that contains `DrawingItems`. Users can add configurations for the `D
 | ----------- | ----------- |
 | [`initWithId`](#dcedrawinglayer) | The constructor of the `DCEDrawingLayer` class. |
 | [`id`](#id) | Get the `DrawingLayer` ID of the `DrawingLayer`. |
+| [`drawingItems`](#drawingitems) | A list of `DrawingItems`. |
 | [`addDrawingItems`](#adddrawingitems) | Add a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will be appended to the `DrawingItem` list of the current `DrawingLayer`. |
-| [`setDrawingItems`](#setdrawingitems) | Set a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will replace the previous `DrawingItems` of the current `DrawingLayer`. |
-| [`getDrawingItems`](#getdrawingitems) | Get all available `DrawingItems` in the `DrawingLayer`. |
-| [`clearDrawingItems`](#cleardrawingitems) | Clear all available `DrawingItems` in the `DrawingLayer`. |
 | [`setDrawingStyleId`](#setdrawingstyleid) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
 | [`setDrawingStyleId:state:`](#setdrawingstyleidstate) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
 | [`setDrawingStyleId:state:mediaType:`](#setdrawingstyleidstatemediatype) | Set the `DrawingStyle` of the `DrawingLayer` by ID. |
@@ -63,9 +61,17 @@ The ID of the `DrawingLayer`.
 
 &nbsp;
 
+## drawingItems
+
+The property that stores all the `DrawingItems` on the layer. This property determines which `DrawingItems` will be displayed on the layer.
+
+```objc
+@property (nonatomic, strong, readwrite, nullable) NSArray<DrawingItem *> *drawingItems;
+```
+
 ## addDrawingItems
 
-Add a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will be appended to the `DrawingItem` list of the current `DrawingLayer`.
+Add a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will be appended to the property `drawingItems`.
 
 ```objc
 - (void) addDrawingItems:(NSArray<DrawingItem*>*)items; 
@@ -98,88 +104,6 @@ let textDrawingItem = TextDrawingItem.init(text:"Your-Text" rect: CGRect(x:100, 
 drawingItems.add(rectDrawingItem)
 drawingItems.add(textDrawingItem)
 drawingLayer.addDrawingItems(drawingItems)
-```
-
-&nbsp;
-
-## setDrawingItems
-
-Set a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will replace the previous `DrawingItems` of the current `DrawingLayer`.
-
-```objc
-- (void) setDrawingItems:(NSArray<DrawingItem*>*)items; 
-```
-
-**Parameters**
-
-`items`: A list of `DrawingItems`.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-NSMutableArray<DrawingItem*>* drawingItems = [drawingLayer getDrawingItems];
-DrawingItem* rectDrawingItem = [[RectDrawingItem alloc] initWithRect: CGRectMake(100,100,300,300)];
-DrawingItem* textDrawingItem = [[TextDrawingItem alloc] initWithText:@"Your-Text" textRect:CGRectMake(100,100,300,300)];
-[drawingItems insertObject:rectDrawingItem atIndex:0];
-[drawingItems insertObject:textDrawingItem atIndex:0];
-[drawingLayer setDrawingItems:drawingItems coordinateSystem:EnumCoordinateSystemImage];
-```
-2. 
-```swift
-let drawingItems = drawingLayer.getDrawingItems()
-let rectDrawingItem = RectDrawingItem.init(rect: CGRect(x:100, y:100, width:300, height:300))
-let textDrawingItem = TextDrawingItem.init(text:"Your-Text" rect: CGRect(x:100, y:100, width:300, height:300))
-drawingItems.add(rectDrawingItem)
-drawingItems.add(textDrawingItem)
-drawingLayer.setDrawingItems(drawingItems)
-```
-
-&nbsp;
-
-## getDrawingItems
-
-Get all available `DrawingItems` in the `DrawingLayer`.
-
-```objc
-- (NSArray<DrawingItem*>* _Nullable) getDrawingItems;
-```
-
-**Return Value**
-
-A list that includes all available `DrawingItems`.
-
-**Code Snippet**
-
-Please view the code snippet in [`setDrawingItems`](#setdrawingitems).
-
-&nbsp;
-
-## clearDrawingItems
-
-Clear all available `DrawingItems` in the `DrawingLayer`.
-
-```objc
-- (void) clearDrawingItems;
-```
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-[drawingLayer clearDrawingItems];
-```
-2. 
-```swift
-drawingLayer.clearDrawingItems()
 ```
 
 &nbsp;
