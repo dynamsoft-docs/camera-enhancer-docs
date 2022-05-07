@@ -48,11 +48,11 @@ An instance of `DrawingStyle`.
 >
 >1. 
 ```objc
-DrawingStyle* style = [DrawingStyleManager getDrawingStyle];
+DrawingStyle* style = [DrawingStyleManager getDrawingStyle:DEFAULT_STYLE_ID_1];
 ```
 2. 
 ```swift
-let style = DrawingStyleManager.getDrawingStyle()
+let style = DrawingStyleManager.getDrawingStyle(DEFAULT_STYLE_ID_1)
 ```
 
 **Remarks**

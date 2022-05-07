@@ -32,7 +32,7 @@ An instance of `DrawingStyle`.
 **Code Snippet**
 
 ```java
-DrawingStyle defaultStyle = DrawingStyleManager.getDrawingStyle(0);
+DrawingStyle defaultStyle = DrawingStyleManager.getDrawingStyle(DrawingStyleManager.DEFAULT_STYLE_ID_1);
 ```
 
 **Remarks**
