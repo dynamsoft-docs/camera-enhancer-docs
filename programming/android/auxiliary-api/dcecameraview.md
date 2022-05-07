@@ -274,7 +274,7 @@ public DCEDrawingLayer getDrawingLayer(int id);
 **Code Snippet**
 
 ```java
-DCEDrawingLayer layer = dceCameraView.getDrawingLayer(0);
+DCEDrawingLayer layer = dceCameraView.getDrawingLayer(DCEDrawingLayer.DDN_LAYER_ID);
 ```
 
 &nbsp;

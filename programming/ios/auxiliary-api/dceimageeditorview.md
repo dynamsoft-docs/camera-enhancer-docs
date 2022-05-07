@@ -81,6 +81,15 @@ let imageData = imageEditorView.getOriginalImage()
 
 `id`: The id of the drawing layer.
 
+**Available ID List**
+
+| Layer | ID |
+| ----- | -- |
+| DDN_LAYER_ID | 1 |
+| DBR_LAYER_ID | 2 |
+| DLR_LAYER_ID | 3 |
+| USER_DEFINED_LAYER_BASE_ID | 100 |
+
 **Return Value**
 
 The targeting instance of [`DCEDrawingLayer`](dcedrawinglayer.md).
@@ -93,11 +102,11 @@ The targeting instance of [`DCEDrawingLayer`](dcedrawinglayer.md).
 >
 >1. 
 ```objc
-DCEDrawingLayer* drawingLayer = [imageEditorView getDrawingLayer];
+DCEDrawingLayer* drawingLayer = [imageEditorView getDrawingLayer:DBR_LAYER_ID];
 ```
 2. 
 ```swift
-let drawingLayer = imageEditorView.getDrawingLayer()
+let drawingLayer = imageEditorView.getDrawingLayer(DBR_LAYER_ID)
 ```
 
 ## createDrawingLayer

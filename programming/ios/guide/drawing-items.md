@@ -26,23 +26,18 @@ breadcrumbText: iOS Guide
 
 When `DynamsoftCameraEnhancer(DCE)` is used together with other Dynamsoft products like `DynamsoftBarcodeReader(DBR)` and `DynamsoftDocumentNormalizer(DDN)`, it can automatically draw highlight overlays (`QuadDrawingItem`) on the detected barcodes or documents. If you want to disable this feature, you can use the following code to stop drawing the highlights.
 
-```swift
-// Example: Remove all highlights on the barcodes
-editorView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID).setVisible(false);
-```
-
 <div class="sample-code-prefix"></div>
 >- Objective-C
 >- Swift
 >
 >1. 
 ```objc
-DCEDrawingLayer *dbrLayer = [imageEditorView getDrawingLayer:DCEDrawingLayer.DBR_LAYER_ID];
+DCEDrawingLayer *dbrLayer = [imageEditorView getDrawingLayer:DBR_LAYER_ID];
 drawingLayer
 ```
 2. 
 ```swift
-let dbrLayer = imageEditorView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID)
+let dbrLayer = imageEditorView.getDrawingLayer(DBR_LAYER_ID)
 dbrLayer.visible = false
 ```
 
@@ -54,20 +49,13 @@ You can change the style of the `DrawingItems` specifying a `DrawingStyleId`. Th
 
 To change the style of `DrawingItems` with preset `DrawingStyles`:
 
-```swift
-// You can change the drawing style of all DrawingItems in the layer.
-cameraView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID).setDrawingStyleId(DrawingStyleManager.DEFAULT_STYLE_ID_3);
-// You can also change the drawing style of a part of the DrawingItems.
-editorView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID).setDrawingStyleId(DrawingStyleManager.DEFAULT_STYLE_ID_3, EnumDrawingItemState.DIS_SELECTED, EnumDrawingItemMediaType.DIMT_QUADRILATERAL});
-```
-
 <div class="sample-code-prefix"></div>
 >- Objective-C
 >- Swift
 >
 >1. 
 ```objc
-DCEDrawingLayer *dbrLayer = [imageEditorView getDrawingLayer:DCEDrawingLayer.DBR_LAYER_ID];
+DCEDrawingLayer *dbrLayer = [imageEditorView getDrawingLayer:DBR_LAYER_ID];
 // You can change the drawing style of all DrawingItems in the layer.
 [dbrLayer setDrawingStyleId:DrawingStyleManager.DEFAULT_STYLE_ID_3];
 // You can also change the drawing style of a part of the DrawingItems.
@@ -75,7 +63,7 @@ DCEDrawingLayer *dbrLayer = [imageEditorView getDrawingLayer:DCEDrawingLayer.DBR
 ```
 2. 
 ```swift
-let dbrLayer = imageEditorView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID)
+let dbrLayer = imageEditorView.getDrawingLayer(DBR_LAYER_ID)
 // You can change the drawing style of all DrawingItems in the layer.
 dbrLayer.setDrawingStyleId(DrawingStyleManager.DEFAULT_STYLE_ID_3)
 // You can also change the drawing style of a part of the DrawingItems.
@@ -111,9 +99,8 @@ List of all available preset styles:
 If you want to set other styles to your UI elements, you can add your personal defined `DrawingStyles`.
 
 ```swift
-// Create a new DrawingStyle via DrawingStyle manager and get the style ID of the new style.
+
 int myStyleId = DrawingStyleManager.createDrawingStyle(0xff00ff00,2,0xff00ff00,0xff00ff00,12,"sans-serif");
-// Assign the newly created style to the targeting DrawingItems.
 cameraView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID).setDrawingStyleId(myStyleId);
 ```
 
@@ -123,29 +110,26 @@ cameraView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID).setDrawingStyleId(mySty
 >
 >1. 
 ```objc
+// Create a new DrawingStyle via DrawingStyle manager and get the style ID of the new style.
 UIColor *strokeColour = [UIColor colorWithRed:0.2 green:0.3 blue:0.4 alpha:0.5];
 UIColor *fillColour = [UIColor colorWithRed:0.2 green:0.3 blue:0.4 alpha:0.5];
 UIColor *textColour = [UIColor colorWithRed:0.2 green:0.3 blue:0.4 alpha:0.5];
 UIFont *textFont = [UIFont systemFontOfSize:12.0];
+// Assign the newly created style to the targeting DrawingItems.
 NSInteger myStyle = [DrawingStyleManager createDrawingStyle:strokeColour strokeWidth:2.0 fillColor:fillColour textColor:textColour font:textFont];
 ```
 2. 
 ```swift
+// Create a new DrawingStyle via DrawingStyle manager and get the style ID of the new style.
 let strokeColor = UIColor.init(red: 0.2, green: 0.3, blue: 0.4, alpha: 0.5)
 let fillColour = UIColor.init(red: 0.2, green: 0.3, blue: 0.4, alpha: 0.5)
 let textColor = UIColor.init(red: 0.2, green: 0.3, blue: 0.4, alpha: 0.5)
 let textFont = UIFont.systemFont(ofSize: 12, weight: UIFont.weight.light)
+// Assign the newly created style to the targeting DrawingItems.
 let myStyleID = DrawingStyleManager.createDrawingStyle(strokeColor, strokeWidth:1, fillColor:fillColor, textColor:textColor, font: textFont)
 ```
 
 To modify the existing DrawingStyles:
-
-```swift
-// Get the style by ID.
-
-// Modify the style.
-
-```
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -153,11 +137,17 @@ To modify the existing DrawingStyles:
 >
 >1. 
 ```objc
-
+// Get the style by ID.
+DrawingStyle *myStyle = [DrawingStyleManager getDrawingStyle:DEFAULT_STYLE_ID_1];
+// Modify the style.
+myStyle.strokeColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:0.5];
 ```
 2. 
 ```swift
-
+// Get the style by ID.
+let myStyle = DrawingStyleManager.getDrawingStyle(DEFAULT_STYLE_ID_1)
+// Modify the style.
+myStyle.strokeColor = UIColor.init(red: 0.7, green: 0.7, blue: 0.7, alpha: 0.5)
 ```
 
 &nbsp;
@@ -172,49 +162,56 @@ Apart from the system-defined items, you can add your personal defined UI elemen
 
 1. Create a new `QuadDrawingItem`.
 
-   ```swift
-   // Create a new quadrilateral.
-   com.dynamsoft.core.Quadrilateral newQuad = new Quadrilateral();
-   // Add your code to assign the quad data.
-   newQuad.points = new com.dynamsoft.core.Point[]{new Point(0,0),new Point(100,0), new Point(100,100), new Point(0,100)};
-   // Use the newly created quadrilateral to initialize the DrawingItem.
-   DrawingItem item = new QuadDrawingItem(newQuad);
-   ```
-
    <div class="sample-code-prefix"></div>
    >- Objective-C
    >- Swift
    >
    >1. 
    ```objc
+   // Create a new quadrilateral.
+   iQuadrilateral *newQuad = [iQuadrilateral init];
+   // Add your code to assign the quad data.
+   newQuad = @[@(CGPointMake(x:0, y:0)), @(CGPointMake(x:0, y:100)), @(CGPointMake(x:100, y:100)), @(CGPointMake(x:100, y:0))];
+   // Use the newly created quadrilateral to initialize the DrawingItem.
+   QuadDrawingItem *newItem = [[QuadDrawingItem alloc] initWithQuad: newQuad];
    ```
    2. 
    ```swift
+   // Create a new quadrilateral.
+   let newQuad:iQuadrilateral = iQuadrilateral.init()
+   // Add your code to assign the quad data.
+   newQuad.points = [CGPoint.init(x:0, y:0), CGPoint.init(x:0, y:100), CGPoint.init(x:100, y:100), CGPoint.init(x:100, y:0)]
+   // Use the newly created quadrilateral to initialize the DrawingItem.
+   let newDrawingItem = QuadDrawingItem.init(quad: newQuad)
    ```
 
 2. Add the Created `DrawingItems` to the view.
 
-   ```swift
-   // To display the drawingItems on the UI, you have to put the DrawingItems in a ArrayList.
-   ArrayList<DrawingItem> drawingItems = new ArrayList<>();
-   drawingItems.add(item);
-   // The following code shows how to add the ArrayList of DrawingItems to the first layer of the cameraView.
-   // There are multiple layers in DCECameraView and DCEImageEditorView.
-   // You must select a layer for your DrawingItems.
-   cameraView.getDrawingLayer(DCEDrawingLayer.DDN_LAYER_ID).addDrawingItems(drawingItems);
-   // To add the DrawingItems to the imageEditorView
-   // imageEditorView.getDrawingLayer(DCEDrawingLayer.DDN_LAYER_ID).addDrawingItems(drawingItems);
-   ```
-
    <div class="sample-code-prefix"></div>
    >- Objective-C
    >- Swift
    >
    >1. 
    ```objc
+   // Add the previously created drawingItem to an array so that it can be assigned to the drawingItems property of the layer.
+   NSMutableArray<DrawingItem *> *array = [NSMutableArray array];
+   [array addObject:newDrawingItem];
+   // There are multiple layers in DCECameraView and DCEImageEditorView.
+   // You must select a layer for your DrawingItems.
+   DCEDrawingLayer *layer = [editorView getDrawingLayer:DDN_LAYER_ID];
+   // Assign the array to the drawingItems of the layer.
+   layer.drawingItems = array;
    ```
    2. 
    ```swift
+   // Add the previously created drawingItem to an array so that it can be assigned to the drawingItems property of the layer.
+   var array:[DrawingItem]? = []
+   array?.append(newDrawingItem)
+   // There are multiple layers in DCECameraView and DCEImageEditorView.
+   // You must select a layer for your DrawingItems.
+   let layer = editorView.getDrawingLayer(DDN_LAYER_ID)
+   // Assign the array to the drawingItems of the layer.
+   layer.drawingItems = array
    ```
 
 &nbsp;

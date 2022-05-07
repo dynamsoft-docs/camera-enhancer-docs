@@ -43,7 +43,7 @@ To change the style of `DrawingItems` with preset `DrawingStyles`:
 // You can change the drawing style of all DrawingItems in the layer.
 cameraView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID).setDrawingStyleId(DrawingStyleManager.DEFAULT_STYLE_ID_3);
 // You can also change the drawing style of a part of the DrawingItems.
-editorView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID).setDrawingStyleId(DrawingStyleManager.DEFAULT_STYLE_ID_3, EnumDrawingItemState.DIS_SELECTED, EnumDrawingItemMediaType.DIMT_QUADRILATERAL});
+editorView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID).setDrawingStyleId(DrawingStyleManager.DEFAULT_STYLE_ID_3, EnumDrawingItemState.DIS_SELECTED, EnumDrawingItemMediaType.DIMT_QUADRILATERAL);
 ```
 
 List of all available preset styles:

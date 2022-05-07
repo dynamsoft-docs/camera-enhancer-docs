@@ -257,6 +257,15 @@ When the property value is true, the torch button should be displayed. Otherwise
 
 `id`: The id of the drawing layer.
 
+**Available ID List**
+
+| Layer | ID |
+| ----- | -- |
+| DDN_LAYER_ID | 1 |
+| DBR_LAYER_ID | 2 |
+| DLR_LAYER_ID | 3 |
+| USER_DEFINED_LAYER_BASE_ID | 100 |
+
 **Return Value**
 
 The targeting instance of [`DCEDrawingLayer`](dcedrawinglayer.md).
@@ -269,11 +278,11 @@ The targeting instance of [`DCEDrawingLayer`](dcedrawinglayer.md).
 >
 >1. 
 ```objc
-DCEDrawingLayer *drawingLayer = [_dceView getDrawingLayer:1];
+DCEDrawingLayer *drawingLayer = [_dceView getDrawingLayer:DBR_LAYER_ID];
 ```
 2. 
 ```swift
-let drawingLayer = try? dceView.getDrawingLayer(1)
+let drawingLayer = try? dceView.getDrawingLayer(DBR_LAYER_ID)
 ```
 
 &nbsp;

@@ -60,7 +60,7 @@ The `imageData` of the image.
 **Code Snippet**
 
 ```java
-DCEDrawingLayer layer = imageEditorView.getDrawingLayer();
+ImageData image = imageEditorView.getOriginalImage();
 ```
 
 &nbsp;
@@ -93,7 +93,7 @@ An instance of [`DCEDrawingLayer`](dcedrawinglayer.md).
 **Code Snippet**
 
 ```java
-DCEDrawingLayer drawingLayer = dceImageEditorView.getDrawingLayer(2);
+DCEDrawingLayer drawingLayer = dceImageEditorView.getDrawingLayer(DCEDrawingLayer.DDN_LAYER_ID);
 ```
 
 &nbsp;
