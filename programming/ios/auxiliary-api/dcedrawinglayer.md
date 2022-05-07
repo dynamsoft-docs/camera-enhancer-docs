@@ -89,21 +89,30 @@ Add a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will be
 >
 >1. 
 ```objc
-NSMutableArray<DrawingItem*>* drawingItems = [drawingLayer getDrawingItems];
-DrawingItem* rectDrawingItem = [[RectDrawingItem alloc] initWithRect: CGRectMake(100,100,300,300)];
-DrawingItem* textDrawingItem = [[TextDrawingItem alloc] initWithText:@"Your-Text" textRect:CGRectMake(100,100,300,300)];
-[drawingItems insertObject:rectDrawingItem atIndex:0];
-[drawingItems insertObject:textDrawingItem atIndex:0];
-[drawingLayer addDrawingItems:drawingItems coordinateSystem:EnumCoordinateSystemImage];
+// Create a new DrawingItem array.
+NSMutableArray<DrawingItem *> *array = [NSMutableArray array];
+// You can append QuadDrawingItems, RectDrawingItems and TextDrawingItems in the array.
+// For example, we use QuadDrawingItems here. The quad data here is obtained from Dynamsoft Document Normalizer
+for (iDetectedQuadResult *detectedQuadResult in [StaticClass instance].quadArr) {
+   iQuadrilateral *quad = detectedQuadResult.location;
+   QuadDrawingItem *quadItem = [[QuadDrawingItem alloc] initWithQuad:quad];
+   [array addObject:quadItem];
+}
+layer.drawingItems = array;
 ```
 2. 
 ```swift
-let drawingItems = drawingLayer.getDrawingItems()
-let rectDrawingItem = RectDrawingItem.init(rect: CGRect(x:100, y:100, width:300, height:300))
-let textDrawingItem = TextDrawingItem.init(text:"Your-Text" rect: CGRect(x:100, y:100, width:300, height:300))
-drawingItems.add(rectDrawingItem)
-drawingItems.add(textDrawingItem)
-drawingLayer.addDrawingItems(drawingItems)
+// Create a new DrawingItem array.
+var array:[DrawingItem]? = []
+// You can append QuadDrawingItems, RectDrawingItems and TextDrawingItems in the array.
+// For example, we use QuadDrawingItems here. The quad data here is obtained from Dynamsoft Document Normalizer
+for detectQuadResult in StaticClass.instance.quadArray{
+   let quad = detectQuadResult.location
+   let quadItem = QuadDrawingItem.init(quad: quad)
+   array?.append(quadItem)
+}
+// Assign the new DrawingItem array to the drawingItems.
+layer.drawingItems = array
 ```
 
 &nbsp;
@@ -206,7 +215,10 @@ drawingLayer.setDrawingStyleId(0, state:EnumDrawingItemState.selected, mediaType
 The property that stores the visibility of the `DrawingLayer`.
 
 ```objc
-// When visible is true, the `DrawingLayer` is visible.
-// Otherwise, the `DrawingLayer` is invisible.
+
 @property (assign, nonatomic) BOOL visible;
 ```
+
+**Remarks**
+
+When visible is true, the `DrawingLayer` is visible. Otherwise, the `DrawingLayer` is invisible.
