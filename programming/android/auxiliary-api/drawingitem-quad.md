@@ -26,8 +26,6 @@ class QuadDrawingItem extends DrawingItem
 | [`setDrawingStyleId`](#setdrawingstyleid) | Set the drawing style of the current drawing item. |
 | [`getState`](#getstate) | Get the state of the current drawing item. |
 | [`setState`](#setstate) | Set the state of the current drawing item. |
-| [`getCoordinateSystem`](#getcoordinatesystem) | Get the coordinate system of the current drawing item. |
-| [`setCoordinateSystem`](#setcoordinatesystem) | Set the coordinate system of the current drawing item. |
 
 ## QuadDrawingItem
 

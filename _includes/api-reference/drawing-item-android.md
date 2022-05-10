@@ -74,39 +74,3 @@ drawingItem.setState(EnumDrawingItemState.DIS_SELECTED)
 ```
 
 &nbsp;
-
-## getCoordinateSystem
-
-```java
-public EnumCoordinateSystem getCoordinateSystem();
-```
-
-**Return Value**
-
-The coordinate system of the drawing item. It can be the image coordinate or the view coordinate.
-
-**Code Snippet**
-
-```java
-EnumCoordinateSystem coordinateSystem = drawingItem.getCoordinateSystem();
-```
-
-&nbsp;
-
-## setCoordinateSystem
-
-```java
-public void setCoordinateSystem(EnumCoordinateSystem coordinateSystem);
-```
-
-**Parameters**
-
-`coordinateSystem`: the coordinate system of the drawing item. It can be the image coordinate or the view coordinate.
-
-**Code Snippet**
-
-```java
-drawingItem.setCoordinateSystem(EnumCoordinateSystem.CS_IMAGE);
-```
-
-&nbsp;

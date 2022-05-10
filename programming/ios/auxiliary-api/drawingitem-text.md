@@ -24,7 +24,6 @@ breadcrumbText: iOS TextDrawingItem Class
 | [`textRect`](#textrect) | The `CGRect` property that indicates the location of the `TextDrawingItem`. |
 | [`drawingStyleId`](#drawingstyle) | Get the drawing style of the current `DrawingItem`. |
 | [`state`](#state) | Set the state of the current `DrawingItem`. |
-| [`coordinateSystem`](#coordinatesystem) | Get the coordinate system of the current `DrawingItem`. |
 | [`mediaType`](#mediatype) | Get the media type of the current `DrawingItem`. |
 
 &nbsp;
