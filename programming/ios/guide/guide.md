@@ -34,7 +34,7 @@ The following sample will demonstrate how to acquire a frame from video streamin
 
 1. Create a new Objective-C or Swift project.
 
-2. Drag and drop the **DynamsoftCameraEnhancer.framework** into your Xcode project. Make sure to **check Copy items if needed** and **Create groups** to copy the framework into your project's folder.
+2. Drag and drop the **DynamsoftCameraEnhancer.framework** and **DynamsoftCore.framework** into your Xcode project. Make sure to **check Copy items if needed** and **Create groups** to copy the framework into your project's folder.
 
 3. Click on the project. Go to the **General --> Frameworks --> Libraries and Embedded Content**. Set the **Embed type** to **Embed & Sign**.
 

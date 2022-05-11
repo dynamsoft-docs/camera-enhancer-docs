@@ -13,5 +13,3 @@ breadcrumbText: Enumerations
 - [`EnumCameraState`]({{ site.enumerations }}enum-camera-state.html)
 - [`EnumEnhancerFeatures`]({{ site.enumerations }}enum-enhancer-features.html)
 - [`EnumResolution`]({{ site.enumerations }}enum-resolution.html)
-- [`EnumDrawingItemMediaType`]({{ site.enumerations }}enum-drawing-item-media-type.html)
-- [`EnumDrawingItemState`]({{ site.enumerations }}enum-drawing-item-state.html)

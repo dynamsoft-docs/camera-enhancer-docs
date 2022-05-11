@@ -71,10 +71,7 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
     ```groovy
     repositories {
         maven {
-            url "https://download2.dynamsoft.com/maven/dce/aar"
-        }
-        maven {
-            url "https://download2.dynamsoft.com/maven/core/aar"
+            url "https://download2.dynamsoft.com/maven/aar"
         }
     }
     ```
