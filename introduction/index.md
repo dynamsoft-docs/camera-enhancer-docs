@@ -65,17 +65,21 @@ With these features, users can easily integrate the camera and enable certain fe
 - More convenient timing out system
 - High standard camera control.
 
+### UI Configuration
+
+
+
 ## Usage Scenarios
 
-### Continuous barcode decoding
+### Continuous Barcode Decoding
 
 In traditional scan modes, the scanning process are always intermittent because the scanner can’t continue the scan process before it receives a new frame from the camera. DCE frame queue tried to make this intermittent process continuous. The frame queue takes over and saves the new frames captured during the time that the scanner is processing on the former frame. Immediately when the former frame is processed, the scanner will fetch the newest frame in the queue and restart the scanning process. These behaviors will make the scanning experience of the application more fluent and stable.
 
-### Long-distance decoding
+### Long-Distance Decoding
 
 With the help of DCE, users no longer need to manually approach the barcode area when decoding on the barcode that far from the camera. When a barcode area is found but failed to be decoded, DCE enables the camera to zoom in to the barcode area automatically. Once the barcode is decoded successfully, the zoom factor will be restored to the default value.
 
-### Low-end devices
+### Low-End Devices
 
 Bounded up with camera performance, it is always a huge challenge for camera-related applications to perform well on low-end devices. DCE is breaking through these hardware issues by enabling high-standard autofocus and frame filter functions. DCE focus APIs enable users to apply high-standard focus settings, which help the devices to capture higher standard images. In the meanwhile, the frame filter pattern of DCE enables the application to skip processing the low-quality frames.
 
