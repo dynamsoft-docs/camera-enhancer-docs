@@ -101,23 +101,6 @@ Bounded up with camera performance, it is always a huge challenge for camera-rel
 
 ### Class Structure
 
-| Primary Class | UI Classes | Auxiliary Classes |
-| ------------- | ---------- | ----------------- |
-| `CameraEnhancer` | `DCECameraView` | `DCEFrame` |
-|  | `DCEImageEditorView` | `DrawingItem` |
-|  |  | `RectDrawingItem` |
-|  |  | `QuadDrawingItem` |
-|  |  | `TextDrawingItem` |
-|  |  | `DCEDrawingLayer` |
-|  |  | `DrawingStyle` |
-|  |  | `DrawingStyleManager` |
-
-`CameraEnhancer` is the main class that contains all camera control APIs. When working with video streaming, you have to bind the `CameraView`, which displays the video streaming to the `CameraEnhancer` to take control of the camera.
-
-`DCEImageEditorView` is another view class of DCE. It allows you to display editable UI elements on static image for some interaction scenarios.
-
-<!--
-
 **Primary Class**
 
 | Class Name | Description |
@@ -131,6 +114,14 @@ Bounded up with camera performance, it is always a huge challenge for camera-rel
 | `DCECameraView` | The view that displays video streaming. APIs are available to add UI elements on the view. |
 | `DCEImageEditorView` | The view that displays the static image. APIs are available to add editable UI elements on the view. |
 
+<div align="center">
+    <p><img src="overview/assets/views.png" width="70%" alt="cameraview-editorview"></p>
+    <p>DCECameraView & DCEImageEditorView</p>
+</div>
+
+DCECameraView is the view that displays video streaming and reflects when user interact on the camera view.
+
+
 **Auxiliary Classes**
 
 | Class Name | Description |
@@ -143,7 +134,6 @@ Bounded up with camera performance, it is always a huge challenge for camera-rel
 | `DCEDrawingLayer` | The layer that contains the `DrawingItems`. |
 | `DrawingStyle` | The style of DrawingItems. It contains colour and font styles. |
 | `DrawingStyleManager` | The class that can create and manage the `DrawingStyles`. |
--->
 
 ## Programming language
 
