@@ -23,7 +23,7 @@ DCE video buffer is the key feature that speeds up frame acquisition. It also ac
 - Transfer a new frame immediately when the application finishes the processing of the current frame.
 - Enable the applications to skip the time-consuming frames to release the occupancy of computation resources.
 
-When DCE is embedded in an application, the video frames will be preprocessed and temporarily saved in the DCE frame queue. Each time when the application completed the current process, instead of waiting for the camera to transfer a new frame, the application can fetch a new frame from the frame queue immediately. In addition, the frame queue also provides a new solution on the timing out system. By monitoring and controlling the number of frames in the queue, users can enable the application to abandon the current processing frame and restart the scan. The frame queue sharply reduces the lag in the scanning process and it will finally result in a stable and fluent user experience.
+When DCE is embedded in an application, the video frames will be preprocessed and temporarily saved in the DCE video buffer. Each time when the application completed the current process, instead of waiting for the camera to transfer a new frame, the application can fetch a new frame from the video buffer immediately. In addition, the video buffer also provides a new solution on the timing out system. By monitoring and controlling the number of frames in the queue, users can enable the application to abandon the current processing frame and restart the scan. The video buffer sharply reduces the lag in the scanning process and it will finally result in a stable and fluent user experience.
 
 ### Frame Filtering
 
@@ -67,21 +67,63 @@ With these features, users can easily integrate the camera and enable certain fe
 
 ### UI Configuration
 
+For users who are using Dynamsoft products, you might have the requirements to enhance the visual experience of the UI or improve the interaction on video streaming processing. DCE UI Configuration APIs can help you to quickly create static or interactable UI elements on the view. When working with DCE UI configuration APIs, you can either use the preset UI conponments or create user defined graphics.
 
+<div align="center">
+    <p><img src="overview/assets/ui-configuration.png" width="70%" alt="ui-configuration"></p>
+    <p>DCE UI Configuration APIs</p>
+</div>
 
 ## Usage Scenarios
 
-### Continuous Barcode Decoding
+### Smooth, Silky and Stable Video Streaming Processing
 
-In traditional scan modes, the scanning process are always intermittent because the scanner can’t continue the scan process before it receives a new frame from the camera. DCE frame queue tried to make this intermittent process continuous. The frame queue takes over and saves the new frames captured during the time that the scanner is processing on the former frame. Immediately when the former frame is processed, the scanner will fetch the newest frame in the queue and restart the scanning process. These behaviors will make the scanning experience of the application more fluent and stable.
+In traditional scan modes, the fluency of video streaming processing are always limmited by  the frame rate of the camera. DCE video buffer make it possible for user
 
-### Long-Distance Decoding
+### Interact when Scanning Documents
+
+When scanning the documents, users can use DCE UI configuration APIs to create editable quad borders arround the detected quad areas.
+
+<div align="center">
+    <p><img src="overview/assets/document-scanner.png" width="70%" alt="document-scan"></p>
+    <p>Document Scanner</p>
+</div>
+
+### Long-Distance Barcode Decoding
 
 With the help of DCE, users no longer need to manually approach the barcode area when decoding on the barcode that far from the camera. When a barcode area is found but failed to be decoded, DCE enables the camera to zoom in to the barcode area automatically. Once the barcode is decoded successfully, the zoom factor will be restored to the default value.
 
 ### Low-End Devices
 
 Bounded up with camera performance, it is always a huge challenge for camera-related applications to perform well on low-end devices. DCE is breaking through these hardware issues by enabling high-standard autofocus and frame filter functions. DCE focus APIs enable users to apply high-standard focus settings, which help the devices to capture higher standard images. In the meanwhile, the frame filter pattern of DCE enables the application to skip processing the low-quality frames.
+
+## SDK Structure
+
+### Primary Class
+
+| Class Name | Description |
+| ---------- | ----------- |
+| `CameraEnhancer` | The main class that contains all camera control APIs. |
+
+### UI Classes
+
+| Class Name | Description |
+| ---------- | ----------- |
+| `DCECameraView` | The view that displays video streaming. APIs are available to add UI elements on the view. |
+| `DCEImageEditorView` | The view that displays the static image. APIs are available to add editable UI elements on the view. |
+
+### Auxiliary Classes
+
+| Class Name | Description |
+| ---------- | ----------- |
+| `DCEFrame` | The struct the stores image data of video frame and ohther frame information. |
+| `DrawingItem` | The UI elements that can be displayed on DCE views. |
+| `RectDrawingItem` | The `DrawingItem` with media type rectangle. |
+| `QuadDrawingItem` | The `DrawingItem` with media type quadrilateral. |
+| `TextDrawingItem` | The `DrawingItem` with media type text. |
+| `DCEDrawingLayer` | The layer that contains the `DrawingItems`. |
+| `DrawingStyle` | The style of DrawingItems. It contains colour and font styles. |
+| `DrawingStyleManager` | The class that can create and manage the `DrawingStyles`. |
 
 ## Programming language
 
