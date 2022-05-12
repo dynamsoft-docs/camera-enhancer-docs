@@ -119,8 +119,7 @@ Bounded up with camera performance, it is always a huge challenge for camera-rel
     <p>DCECameraView & DCEImageEditorView</p>
 </div>
 
-DCECameraView is the view that displays video streaming and reflects when user interact on the camera view.
-
+DCECameraView and DCEImageEditorView are UI view classes that display and administrate video, image and other UI elements. The UI element on the view can visualize the output of other dynamsoft products, which enhance the interaction of a scanner app.
 
 **Auxiliary Classes**
 
