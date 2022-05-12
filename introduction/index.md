@@ -115,7 +115,7 @@ Bounded up with camera performance, it is always a huge challenge for camera-rel
 | `DCEImageEditorView` | The view that displays the static image. APIs are available to add editable UI elements on the view. |
 
 <div align="center">
-    <p><img src="overview/assets/views.png" width="70%" alt="cameraview-editorview"></p>
+    <p><img src="overview/assets/views.jpg" width="70%" alt="cameraview-editorview"></p>
     <p>DCECameraView & DCEImageEditorView</p>
 </div>
 
