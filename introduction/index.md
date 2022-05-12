@@ -99,20 +99,22 @@ Bounded up with camera performance, it is always a huge challenge for camera-rel
 
 ## SDK Structure
 
-### Primary Class
+### Class Structure
+
+**Primary Class**
 
 | Class Name | Description |
 | ---------- | ----------- |
 | `CameraEnhancer` | The main class that contains all camera control APIs. |
 
-### UI Classes
+**UI Classes**
 
 | Class Name | Description |
 | ---------- | ----------- |
 | `DCECameraView` | The view that displays video streaming. APIs are available to add UI elements on the view. |
 | `DCEImageEditorView` | The view that displays the static image. APIs are available to add editable UI elements on the view. |
 
-### Auxiliary Classes
+**Auxiliary Classes**
 
 | Class Name | Description |
 | ---------- | ----------- |
@@ -124,6 +126,8 @@ Bounded up with camera performance, it is always a huge challenge for camera-rel
 | `DCEDrawingLayer` | The layer that contains the `DrawingItems`. |
 | `DrawingStyle` | The style of DrawingItems. It contains colour and font styles. |
 | `DrawingStyleManager` | The class that can create and manage the `DrawingStyles`. |
+
+### How to Use
 
 ## Programming language
 
