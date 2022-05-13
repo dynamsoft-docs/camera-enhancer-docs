@@ -45,7 +45,7 @@ The frame filter prevents the frame processing algorithm from spending too much 
 
 ### Auto Focus
 
-For the low-end cameras, DCE enables users to make autofocus settings on controlling the camera proactively so that we will not stay on the blurry frames. Other focus settings are also available for users to deploy more personalized and advanced camera focus settings.
+DCE is able to detect focus status by monitoring the video frame quality. DCE enhanced focus can be triggered automatically when the quality of video streaming is detected to be declining. This feature will benefits the low-end devices when they are facing focus issues.
 
 ### Auto Zoom
 
@@ -55,24 +55,32 @@ If the barcode reader is enabled at the same time when DCE is working, we can us
 
 Last but not least, we incorporated camera control APIs in the SDK. The benefits of these APIs are:
 
-- Enable users to add camera functionality with a few lines of code
+- Enable developers to add camera functionality with a few lines of code
 - Unified experience on iOS/Android
-
-With these features, users can easily integrate the camera and enable certain features when required so that the rest of the application logic can get high-quality images to process, which results in:
-
-- Speed up on barcode or text reading.
-- Less misreading rate.
-- More convenient timing out system
-- High standard camera control.
 
 ### UI Configuration
 
-For users who are using Dynamsoft products, you might have the requirements to enhance the visual experience of the UI or improve the interaction on video streaming processing. DCE UI Configuration APIs can help you to quickly create static or interactable UI elements on the view. When working with DCE UI configuration APIs, you can either use the preset UI conponments or create user defined graphics.
+DCE UI configuration APIs are designed to fullfil the potential requirements when using Dynamsoft SDKs. Generally, DCE can be deployed to visualize the scan result or intermediate result of Dynamsoft Barcode Reader or Dynamsoft Document Normalizer. When displaying these results on the UI, using DCE UI configuration APIs can save the time on layout and style control.
+
+**Layout Configuration**
+
+The main advantage of DCE UI configuration APIs is user don't need to transform the data format and the coordinate system. DCE can directly read the data transferred by Dynamsoft SDKs and display the results on the UI. When new results are recognized and transfered, the UI elements will be dynamically updated.
+
+**Style Control**
+
+Basic styles configurations are available on the colour, size and font of the UI elements that are displayed on the DCE view. Developers can either select from the preset style templates or create user-defined styles when using DCE UI configuration APIs.
 
 <div align="center">
     <p><img src="overview/assets/ui-configuration.png" width="70%" alt="ui-configuration"></p>
     <p>DCE UI Configuration APIs</p>
 </div>
+
+With these features, developers can easily integrate the camera and enable certain features when required so that the rest of the application logic can get high-quality images to process, which results in:
+
+- Speed up on barcode or text reading.
+- Less misreading rate.
+- More convenient timing out system
+- High standard camera control.
 
 ## Usage Scenarios
 
@@ -97,7 +105,7 @@ With the help of DCE, users no longer need to manually approach the barcode area
 
 Bounded up with camera performance, it is always a huge challenge for camera-related applications to perform well on low-end devices. DCE is breaking through these hardware issues by enabling high-standard autofocus and frame filter functions. DCE focus APIs enable users to apply high-standard focus settings, which help the devices to capture higher standard images. In the meanwhile, the frame filter pattern of DCE enables the application to skip processing the low-quality frames.
 
-## SDK Structure
+## SDK Components
 
 **Primary Class**
 
@@ -105,7 +113,7 @@ Bounded up with camera performance, it is always a huge challenge for camera-rel
 | ---------- | ----------- |
 | `CameraEnhancer` | The main class that contains all camera control APIs. |
 
-Camera Enhancer is the class that integrate regularcamera control APIs. You can apply basic camera configurations and also enable advanced features via CameraEnhancer class. While `CameraEnhancer` class taking control of the camera, `DCECameraView` is the class that responsible for displaying the video streaming on the UI when the camera is opened.
+`CameraEnhancer` is the class that integrate regular camera control APIs. Developers can apply basic camera configurations and also enable advanced features via `CameraEnhancer` class. While `CameraEnhancer` class taking control of the camera, `DCECameraView` is the class that responsible for displaying the video streaming on the UI when the camera is opened.
 
 **UI Classes**
 
@@ -121,7 +129,7 @@ Camera Enhancer is the class that integrate regularcamera control APIs. You can 
 
 `DCECameraView` and `DCEImageEditorView` are UI view classes that display and administrate video, image and other UI elements. The UI element on the view can visualize the output of other dynamsoft products, which enhance the interaction of a scanner app.
 
-`DCECameraView` is the view of video streaming. When users add configurations via `CameraEnhancer` class, `DCECameraView` reflects the realtime changes like camera status, resolution and focus status on the camera.
+`DCECameraView` is the view of video streaming. When developers add configurations via `CameraEnhancer` class, `DCECameraView` reflects the realtime changes like camera status, resolution and focus status on the camera.
 
 `DCEImageEditorView` is the view for developers to display, edit and manipulate images. On `DCEImageEditorView` developers can add editable UI elements via DCE UI configuration APIs to guide users on how to manipulate the images.
 
