@@ -89,11 +89,16 @@ With these features, developers can easily integrate the camera and enable certa
 
 ### Smooth, Silky and Stable Video Streaming Processing
 
-In traditional scan modes, the fluency of video streaming processing are always limmited by the frame rate of the camera.
+In traditional scan modes, the fluency of video streaming processing are always limmited by the frame rate of the camera. When the image processing stread is ready to restart but the next video frame is still not transferred by the camera, there creates an interval. DCE video buffer is designed to banish this kind of intervals from the video streaming processing. The video buffer takes over the video frames that are captured by the camera to make sure the newest video frame is always available for the image processing thread.
 
-### Interact when Scanning Documents
+### Interact When Scanning Documents
 
-When scanning the documents, users can use DCE UI configuration APIs to create editable quad borders arround the detected quad areas.
+For users who are developing a document scanner app with **Dynamsoft Document Normalizer**, DCE UI configuration APIs can fullfil the following interaction requirements:
+
+- Highligh the detected document areas on the video streaming.
+- Show the original image and highlight the document areas in the original image.
+- Enable users to select from the detected areas and edit the detect quadrilateral.
+- Enable users to extract the selected area from the original image and normalize the selected area.
 
 <div align="center">
     <p><img src="overview/assets/document-scanner.png" width="70%" alt="document-scan"></p>
@@ -137,6 +142,8 @@ Bounded up with camera performance, it is always a huge challenge for camera-rel
 `DCEImageEditorView` is the view for developers to display, edit and manipulate images. On `DCEImageEditorView` developers can add editable UI elements via DCE UI configuration APIs to guide users on how to manipulate the images.
 
 **Auxiliary Classes**
+
+The auxiliary classes of DCE are available as follow. They support ether the video streaming processing or UI configurations. For more information please see the API documentation of each platform.
 
 | Class Name | Description |
 | ---------- | ----------- |
