@@ -95,13 +95,13 @@ In traditional scan modes, the fluency of video streaming processing are always 
 
 For users who are developing a document scanner app with **Dynamsoft Document Normalizer**, DCE UI configuration APIs can fullfil the following interaction requirements:
 
-- Highligh the detected document areas on the video streaming.
+- Preview the detected document areas on the video streaming.
 - Show the original image and highlight the document areas in the original image.
 - Enable users to select from the detected areas and edit the detect quadrilateral.
 - Enable users to extract the selected area from the original image and normalize the selected area.
 
 <div align="center">
-    <p><img src="overview/assets/document-scanner.png" width="70%" alt="document-scan"></p>
+    <p><img src="overview/assets/ddn-interaction.jpg" width="80%" alt="document-scan"></p>
     <p>Document Scanner</p>
 </div>
 
