@@ -99,8 +99,6 @@ Bounded up with camera performance, it is always a huge challenge for camera-rel
 
 ## SDK Structure
 
-### Class Structure
-
 **Primary Class**
 
 | Class Name | Description |
@@ -123,7 +121,9 @@ Camera Enhancer is the class that integrate regularcamera control APIs. You can 
 
 `DCECameraView` and `DCEImageEditorView` are UI view classes that display and administrate video, image and other UI elements. The UI element on the view can visualize the output of other dynamsoft products, which enhance the interaction of a scanner app.
 
-DCECameraView is the view of video streaming. It reflects the changes on the camera.
+`DCECameraView` is the view of video streaming. When users add configurations via `CameraEnhancer` class, `DCECameraView` reflects the realtime changes like camera status, resolution and focus status on the camera.
+
+`DCEImageEditorView` is view 
 
 **Auxiliary Classes**
 
