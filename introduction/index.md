@@ -107,6 +107,8 @@ Bounded up with camera performance, it is always a huge challenge for camera-rel
 | ---------- | ----------- |
 | `CameraEnhancer` | The main class that contains all camera control APIs. |
 
+Camera Enhancer is the class that integrate regularcamera control APIs. You can apply basic camera configurations and also enable advanced features via CameraEnhancer class. While `CameraEnhancer` class taking control of the camera, `DCECameraView` is the class that responsible for displaying the video streaming on the UI when the camera is opened.
+
 **UI Classes**
 
 | Class Name | Description |
@@ -119,7 +121,9 @@ Bounded up with camera performance, it is always a huge challenge for camera-rel
     <p>DCECameraView & DCEImageEditorView</p>
 </div>
 
-DCECameraView and DCEImageEditorView are UI view classes that display and administrate video, image and other UI elements. The UI element on the view can visualize the output of other dynamsoft products, which enhance the interaction of a scanner app.
+`DCECameraView` and `DCEImageEditorView` are UI view classes that display and administrate video, image and other UI elements. The UI element on the view can visualize the output of other dynamsoft products, which enhance the interaction of a scanner app.
+
+DCECameraView is the view of video streaming. It reflects the changes on the camera.
 
 **Auxiliary Classes**
 
@@ -141,5 +145,3 @@ Dynamsoft Camera Enhancer is now available for the following programming languag
 - **JavaScript** for Browsers (only limited features at present)
 - **Java** for Android
 - **Objective-C** & **Swift** for iOS
-
-[Get started with Dynamsoft Camera Enhancer >](../programming/index.md)
