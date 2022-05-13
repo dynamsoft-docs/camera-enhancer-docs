@@ -64,23 +64,26 @@ DCE UI configuration APIs are designed to fullfil the potential requirements whe
 
 **Layout Configuration**
 
-The main advantage of DCE UI configuration APIs is user don't need to transform the data format and the coordinate system. DCE can directly read the data transferred by Dynamsoft SDKs and display the results on the UI. When new results are recognized and transfered, the UI elements will be dynamically updated.
+The main advantage of DCE UI configuration APIs is user don't need to transform the data format and the coordinate system. DCE can directly read the data that transferred by Dynamsoft SDKs and generate it into an element on the UI. When new data is obtained and transfered, the UI element will be dynamically updated.
 
 **Style Control**
 
-Basic styles configurations are available on the colour, size and font of the UI elements that are displayed on the DCE view. Developers can either select from the preset style templates or create user-defined styles when using DCE UI configuration APIs.
+Basic style configuration is available for the UI elements that are displayed on the DCE view. Developers can either select from the preset style templates or create user-defined styles when using DCE UI configuration APIs.
+
+&nbsp;
 
 <div align="center">
     <p><img src="overview/assets/ui-configuration.png" width="70%" alt="ui-configuration"></p>
     <p>DCE UI Configuration APIs</p>
 </div>
 
+&nbsp;
+
 With these features, developers can easily integrate the camera and enable certain features when required so that the rest of the application logic can get high-quality images to process, which results in:
 
-- Speed up on barcode or text reading.
-- Less misreading rate.
-- More convenient timing out system
-- High standard camera control.
+- High Quality Video Streaming
+- High Standard Camera Control
+- High Level Interactable UI
 
 ## Usage Scenarios
 
