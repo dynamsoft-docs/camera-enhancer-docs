@@ -78,7 +78,7 @@ For users who are using Dynamsoft products, you might have the requirements to e
 
 ### Smooth, Silky and Stable Video Streaming Processing
 
-In traditional scan modes, the fluency of video streaming processing are always limmited by  the frame rate of the camera. DCE video buffer make it possible for user
+In traditional scan modes, the fluency of video streaming processing are always limmited by the frame rate of the camera.
 
 ### Interact when Scanning Documents
 
@@ -123,7 +123,7 @@ Camera Enhancer is the class that integrate regularcamera control APIs. You can 
 
 `DCECameraView` is the view of video streaming. When users add configurations via `CameraEnhancer` class, `DCECameraView` reflects the realtime changes like camera status, resolution and focus status on the camera.
 
-`DCEImageEditorView` is view 
+`DCEImageEditorView` is the view for developers to display, edit and manipulate images. On `DCEImageEditorView` developers can add editable UI elements via DCE UI configuration APIs to guide users on how to manipulate the images.
 
 **Auxiliary Classes**
 
