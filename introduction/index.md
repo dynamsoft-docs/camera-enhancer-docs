@@ -60,7 +60,7 @@ Last but not least, we incorporated camera control APIs in the SDK. The benefits
 
 ### UI Configuration
 
-DCE UI configuration APIs are designed to fullfil the potential requirements when using Dynamsoft SDKs. Generally, DCE can be deployed to visualize the scan result or intermediate result of Dynamsoft Barcode Reader or Dynamsoft Document Normalizer. When displaying these results on the UI, using DCE UI configuration APIs can save the time on layout and style control.
+DCE UI configuration APIs are designed to fullfil the UI interaction requirements when using Dynamsoft SDKs. Generally, DCE can be deployed to visualize the scan result or intermediate result of Dynamsoft Barcode Reader or Dynamsoft Document Normalizer. When displaying these results on the UI, using DCE UI configuration APIs can save the time on the layout and style control.
 
 **Layout Configuration**
 
@@ -91,7 +91,7 @@ With these features, developers can easily integrate the camera and enable certa
 
 In traditional scan modes, the fluency of video streaming processing are always limmited by the frame rate of the camera. When the image processing stread is ready to restart but the next video frame is still not transferred by the camera, there creates an interval. DCE video buffer is designed to banish this kind of intervals from the video streaming processing. The video buffer takes over the video frames that are captured by the camera to make sure the newest video frame is always available for the image processing thread.
 
-### Interact When Scanning Documents
+### Interactions for Documents Scanning
 
 For users who are developing a document scanner app with **Dynamsoft Document Normalizer**, DCE UI configuration APIs can fullfil the following interaction requirements:
 
