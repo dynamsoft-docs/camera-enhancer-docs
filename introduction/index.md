@@ -89,9 +89,12 @@ With these features, developers can easily integrate the camera and enable certa
 
 ### Smooth, Silky and Stable Video Streaming Processing
 
-In traditional scan modes, the fluency of video streaming processing are always limmited by the frame rate of the camera. When the image processing stread is ready to restart but the next video frame is still not transferred by the camera, there creates an interval. DCE video buffer is designed to banish this kind of intervals from the video streaming processing. The video buffer takes over the video frames that are captured by the camera to make sure the newest video frame is always available for the image processing thread.
+In traditional scan modes, there are two factors that influence the speed of video streaming processing. The processing speed on a single video frame and the time consumption on obtaining the next video frame. When the image processing thread is ready to restart but the next video frame is still not received by the scanner, there creates an interval. DCE video buffer is designed to banish these intervals by:
 
-### Interactions for Documents Scanning
+- Optimize the obtaining of video frames so that the newest video frames are always available.
+- Open a new thread for obtaining video frames so that the main thread will never be blocked.
+
+### Interactive Documents Scanning
 
 For users who are developing a document scanner app with **Dynamsoft Document Normalizer**, DCE UI configuration APIs can fullfil the following interaction requirements:
 
@@ -101,7 +104,7 @@ For users who are developing a document scanner app with **Dynamsoft Document No
 - Enable users to extract the selected area from the original image and normalize the selected area.
 
 <div align="center">
-    <p><img src="overview/assets/ddn-interaction.jpg" width="80%" alt="document-scan"></p>
+    <p><img src="overview/assets/interaction.jpg" width="80%" alt="document-scan"></p>
     <p>Document Scanner</p>
 </div>
 
