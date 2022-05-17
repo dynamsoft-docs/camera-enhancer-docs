@@ -20,7 +20,7 @@ breadcrumbText: Release Note
 {%- include release-notes/product-highlight-3.0.0.md -%}
 
 <div align="center">
-  <p><img src="introduction/overview/assets/edit.png" width="70%" alt="Fast-mode"></p>
+  <p><img src="introduction/overview/assets/edit.png" width="40%" alt="Fast-mode"></p>
   <p>Edit quadrilateral on DCEImageEditorView</p>
 </div>
 
