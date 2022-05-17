@@ -104,7 +104,7 @@ For users who are developing a document scanner app with **Dynamsoft Document No
 - Enable users to extract the selected area from the original image and normalize the selected area.
 
 <div align="center">
-    <p><img src="overview/assets/interaction.jpg" width="80%" alt="document-scan"></p>
+    <p><img src="overview/assets/interaction.png" width="80%" alt="document-scan"></p>
     <p>Document Scanner</p>
 </div>
 
