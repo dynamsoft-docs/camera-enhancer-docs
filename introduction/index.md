@@ -25,6 +25,8 @@ DCE video buffer is the key feature that speeds up frame acquisition. It also ac
 
 When DCE is embedded in an application, the video frames will be preprocessed and temporarily saved in the DCE video buffer. Each time when the application completed the current process, instead of waiting for the camera to transfer a new frame, the application can fetch a new frame from the video buffer immediately. In addition, the video buffer also provides a new solution on the timing out system. By monitoring and controlling the number of frames in the queue, users can enable the application to abandon the current processing frame and restart the scan. The video buffer sharply reduces the lag in the scanning process and it will finally result in a stable and fluent user experience.
 
+DCE video buffer is the key feature that speeds up frame acquisition and stabilize the video streaming processing.
+
 ### Frame Filtering
 
 DCE can implement the sensor filter and frame sharpness filter on the camera video frames. The blurred frames will be skipped in the image reading process. The filter methods include:
@@ -89,10 +91,12 @@ With these features, developers can easily integrate the camera and enable certa
 
 ### Smooth, Silky and Stable Video Streaming Processing
 
-In traditional scan modes, there are two factors that influence the speed of video streaming processing. The processing speed on a single video frame and the time consumption on obtaining the next video frame. When the image processing thread is ready to restart but the next video frame is still not received by the scanner, there creates an interval. DCE video buffer is designed to banish these intervals by:
+In traditional scan modes, there are two factors that influence the speed of video streaming processing, the processing speed on a single video frame and the time consumption on obtaining the next video frame. When the image processing thread is ready to restart but the next video frame is still not received by the scanner, there creates an interval. DCE video buffer is designed to banish these intervals by:
 
 - Optimize the obtaining of video frames so that the newest video frames are always available.
 - Open a new thread for obtaining video frames so that the main thread will never be blocked.
+
+When using DCE based camera module, your will experience a more fluency video streaming processing.
 
 ### Interactive Documents Scanning
 
