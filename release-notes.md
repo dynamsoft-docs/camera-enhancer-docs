@@ -19,6 +19,11 @@ breadcrumbText: Release Note
 
 {%- include release-notes/product-highlight-3.0.0.md -%}
 
+<div align="center">
+  <p><img src="introduction/overview/assets/edit.png" width="70%" alt="Fast-mode"></p>
+  <p>Edit quadrilateral on DCEImageEditorView</p>
+</div>
+
 | Versions | Available Editions |
 | -------- | ------------------ |
 | 3.0.0 | [Android]({{ site.android-release-note }}release-notes-3.x.html#300-05192022) / [iOS]({{ site.ios-release-note }}release-notes-3.x.html#300-05192022) |

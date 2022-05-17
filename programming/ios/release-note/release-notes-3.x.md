@@ -16,6 +16,11 @@ breadcrumbText: iOS 3.x Release Notes
 
 {%- include release-notes/product-highlight-3.0.0.md -%}
 
+<div align="center">
+  <p><img src="assets/edit.png" width="70%" alt="Fast-mode"></p>
+  <p>Edit quadrilateral on DCEImageEditorView</p>
+</div>
+
 ### Changelog
 
 #### New
