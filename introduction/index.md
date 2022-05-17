@@ -23,9 +23,11 @@ DCE video buffer is the key feature that speeds up frame acquisition. It also ac
 - Transfer a new frame immediately when the application finishes the processing of the current frame.
 - Enable the applications to skip the time-consuming frames to release the occupancy of computation resources.
 
-When DCE is embedded in an application, the video frames will be preprocessed and temporarily saved in the DCE video buffer. Each time when the application completed the current process, instead of waiting for the camera to transfer a new frame, the application can fetch a new frame from the video buffer immediately. In addition, the video buffer also provides a new solution on the timing out system. By monitoring and controlling the number of frames in the queue, users can enable the application to abandon the current processing frame and restart the scan. The video buffer sharply reduces the lag in the scanning process and it will finally result in a stable and fluent user experience.
+When DCE is embedded in an application, the video frames will be preprocessed and temporarily saved in the DCE video buffer. Each time when the application completed the current process, instead of waiting for the camera to transfer a new frame, the application can fetch a new frame from the video buffer immediately.
 
-DCE video buffer is the key feature that speeds up frame acquisition and stabilize the video streaming processing.
+In addition, the video buffer also provides a new solution on the timing out system. By monitoring and controlling the number of frames in the queue, users can enable the application to abandon the current processing frame and restart the scan. The video buffer sharply reduces the lag in the scanning process and it will finally result in a stable and fluent user experience.
+
+DCE video buffer is the key feature that speeds up frame acquisition and stabilize the video streaming processing. Fetching frame from the video streaming is time consuming, especially on JS edition. DCE video buffer enable the video frame acquisition be processed in a new
 
 ### Frame Filtering
 
@@ -96,7 +98,7 @@ In traditional scan modes, there are two factors that influence the speed of vid
 - Optimize the obtaining of video frames so that the newest video frames are always available.
 - Open a new thread for obtaining video frames so that the main thread will never be blocked.
 
-When using DCE based camera module, your will experience a more fluency video streaming processing.
+When using DCE based camera module, your will experience a more fluent video streaming processing.
 
 ### Interactive Documents Scanning
 
