@@ -11,6 +11,25 @@ breadcrumbText: Release Note
 
 # Release Notes
 
+## 3.0
+
+> First released: 05-19-2022
+
+### Highlights
+
+{%- include release-notes/product-highlight-3.0.0.md -%}
+
+<div align="center">
+  <p><img src="introduction/overview/assets/edit.png" width="40%" alt="Fast-mode"></p>
+  <p>Edit quadrilateral on DCEImageEditorView</p>
+</div>
+
+| Versions | Available Editions |
+| -------- | ------------------ |
+| 3.0.0 | [Android]({{ site.android-release-note }}release-notes-3.x.html#300-05192022) / [iOS]({{ site.ios-release-note }}release-notes-3.x.html#300-05192022) |
+
+&nbsp;
+
 ## 2.3
 
 > First released: 03-21-2022
@@ -23,7 +42,7 @@ breadcrumbText: Release Note
 | -------- | ------------------ |
 | 2.3.1 | [JavaScript]({{ site.js-rn }}release-notes-2.x.html#231-03212022)|
 
-&nbsp; 
+&nbsp;
 
 ## 2.1
 
@@ -57,7 +76,7 @@ breadcrumbText: Release Note
 | -------- | ------------------ |
 | 2.0.0 | [JavaScript]({{ site.js-rn }}release-notes-2.x.html#200-10202021) / [Android]({{ site.android-release-note }}release-notes-2.x.html#200-10192021) / [iOS]({{ site.ios-release-note }}release-notes-2.x.html#200-10192021) |
 
-&nbsp; 
+&nbsp;
 
 <div class="fold-panel-prefix"></div>
 
@@ -65,7 +84,7 @@ breadcrumbText: Release Note
 
 <div class="fold-panel-start"></div>
 
-&nbsp; 
+&nbsp;
 
 ### 1.0
 

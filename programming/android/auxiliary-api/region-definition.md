@@ -13,7 +13,7 @@ noTitleIndex: true
 Stores the region information.
 
 ```java
-class com.dynamsoft.dce.RegionDefinition;
+class com.dynamsoft.core.RegionDefinition;
 ```
 
 | Attribute | Type | Descriptions |

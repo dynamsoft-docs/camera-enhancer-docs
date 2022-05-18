@@ -24,12 +24,13 @@ If you don’t have SDK yet, please download the Dynamsoft Camera Enhancer(DCE) 
 ## Build Your First Application
 
 The following sample will demonstrate how to acquire a frame from video streaming by DCE.
->Note: 
+>Note:
+>
 >- The following steps are completed in Android Studio 4.2.
 >- You can download the similar complete source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/main/android/HelloWorld).
 >- For more samples on using Dynamsoft Camera Enhancer supporting Barcode Reader please [click here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/).
 
-### Create a New Project 
+### Create a New Project
 
 1. Open Android Studio and select New Project… in the File > New > New Project… menu to create a new project.
 
@@ -44,10 +45,11 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
 
 #### Local Binary Dependency
 
-1. Copy the file `[INSTALLATION FOLDER]\Lib\DynamsoftCameraEnhancerAndroid.aar` to the target directory `HelloWorld\app\libs`
+1. Go to the **Libs** folder in the installation package, copy the file `DynamsoftCameraEnhancerAndroid.aar` and `DynamsoftCoreAndroid.aar` to the target directory `HelloWorld\app\libs`
 
 2. Open the file `HelloWorld\app\build.gradle`, and add reference in the dependencies:
-    ```
+
+    ```groovy
     dependencies {
         implementation fileTree(dir: 'libs', include: ['*.aar'])
     }
@@ -56,32 +58,39 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
 3. Click `Sync Now`. After the synchronization completes, the SDK is added to the project.
 
 4. import the package int the file `MainActivity.java`
+
     ```java
     import com.dynamsoft.dce.*;
+    import com.dynamsoft.core.*;
     ```
 
 #### Remote Binary Dependency
 
 1. Open the file `HelloWorld\app\build.gradle`, and add the remote repository:
-    ```
+
+    ```groovy
     repositories {
         maven {
-            url "https://download2.dynamsoft.com/maven/dce/aar"
+            url "https://download2.dynamsoft.com/maven/aar"
         }
     }
     ```
 
 2. Add reference in the dependencies:
-    ```
+
+    ```groovy
     dependencies {
         implementation 'com.dynamsoft:dynamsoftcameraenhancer:{version-number}@aar'
+        implementation 'com.dynamsoft:dynamsoftcore:{version-number}@aar'
     }
     ```
+
     >Note:Please replace {version-number} with the correct version number.
 
 3. Click `Sync Now`. After the synchronization completes, the SDK is added to the project.
 
 4. import the package in the file `MainActivity.java`
+
     ```java
     import com.dynamsoft.dce.*;
     ```
@@ -99,9 +108,10 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
             }
         }
     });
-    ```    
+    ```
 
     >Note:
+    >
     >- Network connection is required for the license to work.
     >- "DLS2***" is a time-limited public trial license used in the sample.
     >- If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
@@ -163,6 +173,7 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
 ### Capture Frame
 
 1. In the Project window, open app > res > layout > `activity_main.xml`, and add a `Button` to capture frame.
+
     ```xml
     <Button
         android:id="@+id/btn_capture"
@@ -213,12 +224,13 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
 ### Additional Steps
 
 1. In the Project window, open app > res > layout > `activity_show_picture.xml`, and add a `ImageView`.
+
     ```xml
-	<ImageView
-		android:id="@+id/iv_picture"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		/>
+    <ImageView
+        android:id="@+id/iv_picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
     ```
 
 2. Display the captured frame in ImageView.
@@ -260,15 +272,13 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
     }
     ```
 
-
-
 ### Build and Run the Project
 
 1. Select the device that you want to run your app on from the target device drop-down menu in the toolbar.
 
 2. Click `Run app` button, then Android Studio installs your app on your connected device and starts it.
 
->Note: 
+>Note:
 >- You can download the similar complete source code from [Here](https://github.com/Dynamsoft/camera-enhancer-mobile-samples/tree/main/android/HelloWorld).
 >- For more samples on using Dynamsoft Camera Enhancer supporting Barcode Reader please [click here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/).
 
@@ -277,5 +287,3 @@ There are two ways to include the Dynamsoft Camera Enhancer SDK into your projec
 ### How to integration with barcode reader
 
 <a href="https://www.dynamsoft.com/barcode-reader/programming/android/user-guide.html?utm_source=docs" target="_blank">This article</a> guides you to integrate barcode reader function into your app.
-
-
