@@ -174,7 +174,6 @@ DCEDrawingLayer layer = dceCameraView.createDrawingLayer();
 This method controls whether the camera view displays coloured and translucent overlays.
 
 ```java
-@Deprecated
 void setOverlayVisible(boolean overlayVisibile)
 ```
 
@@ -198,7 +197,6 @@ dceCameraView.setOverlayVisible(true);
 Get the visibility (true: visible/ false: invisible) of the overlay.
 
 ```java
-@Deprecated
 boolean getOverlayVisible()
 ```
 
@@ -222,7 +220,6 @@ boolean isVisible = dceCameraView.getOverlayVisible();
 Set the stroke and fill colour of the overlays.
 
 ```java
-@Deprecated
 void setOverlayColour(int strokeARGB, int fillARGB)
 ```
 
@@ -247,7 +244,6 @@ dceCameraView.setOverlayColour(0xff00ff00, 0x00000000);
 This method controls whether to display a viewfinder.
 
 ```java
-@Deprecated
 void setViewfinderVisible(boolean viewfinderVisible)
 ```
 
@@ -271,7 +267,6 @@ dceCameraView.setViewfinderVisible(true);
 Get the visibility (true: visible/ false: invisible) of the viewfinder.
 
 ```java
-@Deprecated
 boolean getViewfinderVisible()
 ```
 
@@ -295,7 +290,6 @@ boolean flag = dceCameraView.getViewfinderVisible();
 Set the position and the size of the viewfinder.
 
 ```java
-@Deprecated
 void setViewfinder(float left, float top, float right, float bottom) throws CameraEnhancerException
 ```
 

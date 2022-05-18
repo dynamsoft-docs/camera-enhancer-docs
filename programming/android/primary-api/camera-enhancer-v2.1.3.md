@@ -47,8 +47,6 @@ CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
 
 ### initLicense
 
-> The method is deprecated.
-
 Set product key and activate the SDK.
 
 ```java
