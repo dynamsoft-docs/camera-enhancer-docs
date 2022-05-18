@@ -20,7 +20,7 @@ class com.dynamsoft.dce.CameraEnhancer
 | Method | Description |
 | ------ | ----------- |
 | [`initWithView`](#initwithview) | Initialize the camera enhancer with the camera view |
-| [`initLicense`](#initlicense) | **Deprecated**. Set product key and activate the SDK. |
+| [`initLicense`](#initlicense) | Set product key and activate the SDK. |
 | [`getVersion`](#getversion) | Get the SDK version. |
 
 &nbsp;
@@ -55,8 +55,6 @@ let dce = DynamsoftCameraEnhancer.init(view: dceCameraView)
 &nbsp;
 
 ### initLicense
-
-> The method is deprecated.
 
 Set product key and activate the SDK. It is recommended to initialize the license in `AppDelegate.m`.
 

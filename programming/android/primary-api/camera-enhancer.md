@@ -20,7 +20,7 @@ class com.dynamsoft.dce.CameraEnhancer
 | Method | Description |
 | ------ | ----------- |
 | [`CameraEnhancer`](#cameraenhancer) | Initialize the `CameraEnhancer` object. |
-| [`initLicense`](#initlicense) | Sets product key and activate the SDK. |
+| [`initLicense`](#initlicense) | **Deprecated**. Sets product key and activate the SDK. |
 | [`getVersion`](#getversion) | Get the SDK version. |
 
 &nbsp;

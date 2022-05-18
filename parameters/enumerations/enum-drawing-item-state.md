@@ -20,7 +20,7 @@ The Enumeration of the state of the `DrawingItems`.
 
 ## Member
 
-| Member | Value | Description |
-|--------|-------|-------------|
-| `DIS_DEFAULT` | 0 | The `DrawingItem` is at the default state. |
-| `DIS_SELECTED` | 1 | The `DrawingItem` is selected. |
+| Member (Android) | Member (Objective-C) | Member (Swift) | Value | Description |
+| ---------------- | -------------------- | -------------- | ----- | ----------- |
+| `DIS_DEFAULT` | `EnumDrawingItemStateDefault` | `default` | 0 | The `DrawingItem` is at the default state. |
+| `DIS_SELECTED` | `EnumDrawingItemStateSelected` | `selected` | 1 | The `DrawingItem` is selected. |

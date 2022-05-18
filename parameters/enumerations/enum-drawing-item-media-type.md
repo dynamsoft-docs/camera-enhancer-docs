@@ -20,8 +20,8 @@ The Enumeration of the media type of the `DrawingItems`.
 
 ## Member
 
-| Member | Value | Description |
-|--------|-------|-------------|
-| `DIMT_RECTANGLE` | 0 | The media type is rectangle. |
-| `DIMT_QUADRILATERAL`| 1 | The media type is quadrilateral. |
-| `DIMT_TEXT` | 2 | The media type is text. |
+| Member (Android) | Member (Objective-C) | Member (Swift) | Value | Description |
+| ---------------- | -------------------- | -------------- | ----- | ----------- |
+| `DIMT_RECTANGLE` | `EnumDrawingItemMediaTypeRectangle` | `rectangle` | 0 | The media type is rectangle. |
+| `DIMT_QUADRILATERAL`| `EnumDrawingItemMediaTypeQuadrilateral` | `quadrilateral` | 1 | The media type is quadrilateral. |
+| `DIMT_TEXT` | `EnumDrawingItemMediaTypeText` | `text` | 2 | The media type is text. |
