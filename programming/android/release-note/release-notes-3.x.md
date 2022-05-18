@@ -27,7 +27,7 @@ breadcrumbText: Android 3.x Release Notes
 
 - Added class [`DCEImageEditorView`]({{ site.android-api-auxiliary }}dceimageeditorview.html). Users can add `DCEDrawingLayers` on the `DCEImageEdiorView`.
 - Added class [`DCEDrawingLayer`]({{ site.android-api-auxiliary }}dcedrawinglayer.html). Users can add `DrawingItems` on the `DCEDrawingLayer`.
-- Added class [`DrawingItem`]({{ site.android-api-auxiliary }}drawingitem.html) and subclasses [`RectDrawingItem`]({{ site.android-api-auxiliary }}rectdrawingitem.html), [`QuadDrawingItem`]({{ site.android-api-auxiliary }}quaddrawingitem.html) and [`TextDrawingItem`]({{ site.android-api-auxiliary }}textdrawingitem.html) for users to create UI elements.
+- Added class [`DrawingItem`]({{ site.android-api-auxiliary }}drawingitem.html) and subclasses [`RectDrawingItem`]({{ site.android-api-auxiliary }}drawingitem-rect.html), [`QuadDrawingItem`]({{ site.android-api-auxiliary }}drawingitem-quad.html) and [`TextDrawingItem`]({{ site.android-api-auxiliary }}drawingitem-text.html) for users to create UI elements.
 - Added class [`DrawingStyleManager`]({{ site.android-api-auxiliary }}drawingstylemanager.html) and [`DrawingStyle`]({{ site.android-api-auxiliary }}drawingstyle.html) for users to change the styles of the DrawingItems.
 - Added method [`getDrawingLayer`]({{ site.android-api-auxiliary }}dcecameraview.html#getDrawingLayer) and [`createDrawingLayer`]({{ site.android-api-auxiliary }}dcecameraview.html#createdrawinglayer) to class [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) for users to edit the layers.
 - Added enumerations [`EnumDrawingItemState`]({{ site.enumerations }}enum-drawing-item-state.html) and [`EnumDrawingMediaType`]({{ site.enumerations }}enum-drawing-item-media-type.html).

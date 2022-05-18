@@ -27,7 +27,7 @@ breadcrumbText: iOS 3.x Release Notes
 
 - Added class [`DCEImageEditorView`]({{ site.ios-api-auxiliary }}dceimageeditorview.html). Users can add `DCEDrawingLayers` on the `DCEImageEdiorView`.
 - Added class [`DCEDrawingLayer`]({{ site.ios-api-auxiliary }}dcedrawinglayer.html). Users can add `DrawingItems` on the `DCEDrawingLayer`.
-- Added class [`DrawingItem`]({{ site.ios-api-auxiliary }}drawingitem.html) and subclasses [`RectDrawingItem`]({{ site.ios-api-auxiliary }}rectdrawingitem.html), [`QuadDrawingItem`]({{ site.ios-api-auxiliary }}quaddrawingitem.html) and [`TextDrawingItem`]({{ site.ios-api-auxiliary }}textdrawingitem.html) for users to create UI elements.
+- Added class [`DrawingItem`]({{ site.ios-api-auxiliary }}drawingitem.html) and subclasses [`RectDrawingItem`]({{ site.ios-api-auxiliary }}drawingitem-rect.html), [`QuadDrawingItem`]({{ site.ios-api-auxiliary }}drawingitem-quad.html) and [`TextDrawingItem`]({{ site.ios-api-auxiliary }}drawingitem-text.html) for users to create UI elements.
 - Added class [`DrawingStyleManager`]({{ site.ios-api-auxiliary }}drawingstylemanager.html) and [`DrawingStyle`]({{ site.ios-api-auxiliary }}drawingstyle.html) for users to change the styles of the DrawingItems.
 - Added method [`getDrawingLayer`]({{ site.ios-api-auxiliary }}dcecameraview.html#getDrawingLayer) and [`createDrawingLayer`]({{ site.ios-api-auxiliary }}dcecameraview.html#createdrawinglayer) to class [`DCECameraView`]({{ site.ios-api-auxiliary }}dcecameraview.html) for users to edit the layers.
 - Added enumerations [`EnumDrawingItemState`]({{ site.enumerations }}enum-drawing-item-state.html) and [`EnumDrawingMediaType`]({{ site.enumerations }}enum-drawing-item-media-type.html).
