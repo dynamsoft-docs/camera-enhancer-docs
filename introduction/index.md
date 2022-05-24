@@ -17,15 +17,13 @@ Dynamsoft Camera Enhancer (DCE) is an SDK specially designed to enhance camera f
 
 ### Video Buffer
 
-DCE video buffer is the key feature that speeds up frame acquisition. It also acts as the administrator that takes over the video frames processed by other DCE functions. The main responsibilities of the video buffer are to:
+DCE video buffer is the key feature that speeds up frame acquisition and stabilize the video streaming processing. It also acts as the administrator that takes over the video frames processed by other DCE features. The main responsibilities of the video buffer are to:
 
 - Temporarily store the filtered and cropped video frames.
 - Transfer a new frame immediately when the application finishes the processing of the current frame.
 - Enable the applications to skip the time-consuming frames to release the occupancy of computation resources.
 
-DCE video buffer is the key feature that speeds up frame acquisition and stabilize the video streaming processing. Fetching frame from the video streaming is time consuming, especially on JS edition. DCE video buffer enable the video frame acquisition be processed in a new thread so that it won't block the main processing thread. Each time when the main thread requires a new frame, it can obtain the newest frame from the video buffer without any detention.
-
-Video frames are stored temporarily until they are replaced with the newer ones.
+Fetching frame from the video streaming is time consuming. DCE video buffer enable the video frame acquisition be processed in a new thread so that it won't block the main processing thread. Each time when the main thread requires a new frame, it can obtain the newest frame from the video buffer without any detention.
 
 In addition, the video buffer also provides a new solution on the timing out system. By monitoring and controlling the number of frames in the queue, users can enable the application to abandon the current processing frame and restart the scan. The video buffer sharply reduces the lag in the scanning process and it will finally result in a stable and fluent user experience.
 
