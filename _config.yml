@@ -35,6 +35,18 @@ js-guide: /camera-enhancer/docs/programming/javascript/user-guide/
 js-api: /camera-enhancer/docs/programming/javascript/api-reference/
 js-rn: /camera-enhancer/docs/programming/javascript/release-note/
 
+flutter: /capture-vision/docs/mobile/programming/flutter/
+flutter_api: /capture-vision/docs/mobile/programming/flutter/api-reference/
+
+xamarin: /capture-vision/docs/mobile/programming/xamarin/
+xamarin_api: /capture-vision/docs/mobile/programming/xamarin/api-reference/
+
+cordova: /capture-vision/docs/mobile/programming/cordova/
+cordova_api: /capture-vision/docs/mobile/programming/cordova/api-reference/
+
+react_native: /capture-vision/docs/mobile/programming/react-native/
+react_native_api: /capture-vision/docs/mobile/programming/react-native/api-reference/
+
 reference: /camera-enhancer/docs/parameters/reference/
 enumerations: /camera-enhancer/docs/parameters/enumerations/
 mobile-enum: /camera-enhancer/docs/programming/enumerations/
@@ -72,5 +84,40 @@ defaults:
       path: "Hide_Tree_Page.html"
     values:
       sitemap: false
+  - scope:
+      path: "programming/javascript"
+    values:
+      category: "js-repo"
+      edition: "js"
+  - scope:
+      path: "programming/android"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+  - scope:
+      path: "programming/objectivec-swift"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+  - scope:
+      path: "programming/flutter"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+  - scope:
+      path: "programming/xamarin"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+  - scope:
+      path: "programming/cordova"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+  - scope:
+      path: "programming/react-native"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
 
 url: "https://www.dynamsoft.com" # sitemap root
