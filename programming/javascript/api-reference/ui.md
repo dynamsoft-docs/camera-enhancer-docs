@@ -67,14 +67,15 @@ breadcrumbText: UI
 
 **Auxiliary Features**
 
-| API Name                                                    | Description                                                                                                                                                                 |
-| ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [showTip()](#showtip)                                       | Shows a Tip message.                                                                                                                                                        |
-| [hideTip()](#hidetip)                                       | Hides the Tip message.                                                                                                                                                      |
-| [updateTipMessage()](#updatetipmessage)                     | Changes the Tip message.                                                                                                                                                    |
-| [onTipSuggested()](#ontipsuggested)                         | An event that gets triggered whenever a Tip is suggested.                                                                                                                   |
-| [convertToPageCoordinates()](#converttopagecoordinates)     | Converts coordinates of a point to the coordinates relative to the top left point of the entire document.                                                        |
+| API Name | Description |
+| -------- | ----------- |
+| [showTip()](#showtip) | Shows a Tip message. |
+| [hideTip()](#hidetip) | Hides the Tip message. |
+| [updateTipMessage()](#updatetipmessage)  | Changes the Tip message. |
+| [onTipSuggested()](#ontipsuggested) | An event that gets triggered whenever a Tip is suggested. |
+| [convertToPageCoordinates()](#converttopagecoordinates) | Converts coordinates of a point to the coordinates relative to the top left point of the entire document. |
 | [convertToClientCoordinates()](#converttoclientcoordinates) | Converts coordinates of a point to the coordinates within the application's viewport at which the event occurred (as opposed to the coordinate within the page). |
+
 ## getVisibleRegion
 
 Returns a `Region` object which specifies which part of the original video is shown in the video element.
