@@ -3,7 +3,6 @@ repository: dynamsoft-docs/camera-enhancer-docs
 docFullPath: https://www.dynamsoft.com/camera-enhancer/docs/
 firstLevelUrl: /camera-enhancer/docs/core
 docHomePage: /camera-enhancer/docs/core/introduction/
-frontPageFolder: /camera-enhancer/docs/core/
 
 productUrl: https://www.dynamsoft.com/camera-enhancer/overview/
 productName: Dynamsoft Camera Enhancer
@@ -16,36 +15,19 @@ release_notes: /camera-enhancer/docs/core/release-notes/
 parameter-reference: /camera-enhancer/docs/core/parameters/reference/
 faq: /camera-enhancer/docs/core/faq/
 
-ios: /camera-enhancer/docs/mobile/ios/
-ios-guide: /camera-enhancer/docs/mobile/ios/guide/
-ios-api: /camera-enhancer/docs/mobile/ios/primary-api/
-ios-api-auxiliary: /camera-enhancer/docs/mobile/ios/auxiliary-api/
-ios-release-note: /camera-enhancer/docs/mobile/ios/release-note/
-ios-cameraenhancer: /camera-enhancer/docs/mobile/ios/api/cameraenhancer/
+ios: /camera-enhancer/docs/mobile/programming/ios/
 
-android: /camera-enhancer/docs/mobile/android/
-android-guide: /camera-enhancer/docs/mobile/android/guide/
-android-api: /camera-enhancer/docs/mobile/android/primary-api/
-android-api-auxiliary: /camera-enhancer/docs/mobile/android/auxiliary-api/
-android-release-note: /camera-enhancer/docs/mobile/android/release-note/
-android-cameraenhancer: /camera-enhancer/docs/mobile/android/primary-api/cameraenhancer/
+android: /camera-enhancer/docs/mobile/programming/android/
 
-js: /camera-enhancer/docs/web/javascript/
-js-guide: /camera-enhancer/docs/web/javascript/user-guide/
-js-api: /camera-enhancer/docs/web/javascript/api-reference/
-js-rn: /camera-enhancer/docs/web/javascript/release-note/
+js: /camera-enhancer/docs/web/programming/javascript/
 
 flutter: /capture-vision/docs/mobile/programming/flutter/
-flutter_api: /capture-vision/docs/mobile/programming/flutter/api-reference/
 
 xamarin: /capture-vision/docs/mobile/programming/xamarin/
-xamarin_api: /capture-vision/docs/mobile/programming/xamarin/api-reference/
 
 cordova: /capture-vision/docs/mobile/programming/cordova/
-cordova_api: /capture-vision/docs/mobile/programming/cordova/api-reference/
 
 react_native: /capture-vision/docs/mobile/programming/react-native/
-react_native_api: /capture-vision/docs/mobile/programming/react-native/api-reference/
 
 reference: /camera-enhancer/docs/core/parameters/reference/
 enumerations: /camera-enhancer/docs/core/parameters/enumerations/
@@ -74,7 +56,7 @@ download: /camera-enhancer/downloads/1000021-confirmation/
 
 useVersionTree: true
 
-baseurl: "/camera-enhancer/docs/core/"
+baseurl: "/camera-enhancer/docs/core"
 plugins:
   - jemoji
   - jekyll-sitemap
