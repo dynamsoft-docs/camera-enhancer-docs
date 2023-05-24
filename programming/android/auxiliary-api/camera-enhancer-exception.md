@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Android CameraEnhancerException Class - Dynamsoft Camera Enhancer
-description: This is the documentation - Android CameraEnhancerException Class page of Dynamsoft Camera Enhancer.
+description: Doucmentation of Dynamsoft Camera Enhancer Android CameraEnhancerException class.
 keywords:  Camera Enhancer, Android, CameraEnhancerException
 needAutoGenerateSidebar: true
 noTitleIndex: true

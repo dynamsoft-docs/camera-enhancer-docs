@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Android DCEFrameListener - Dynamsoft Camera Enhancer
-description: This is the documentation - DCEFrameListener page of Dynamsoft Camera Enhancer.
+description: Doucmentation of Dynamsoft Camera Enhancer Android DCEFrameListener Class.
 keywords:  Camera Enhancer, DCEFrameListener
 needAutoGenerateSidebar: true
 noTitleIndex: true

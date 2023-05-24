@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: iOS iRegionDefinition Class - Dynamsoft Camera Enhancer Objective-C & Swift API Reference
-description: This page shows the iRegionDefinition Class of Dynamsoft Camera Enhancer for iOS SDK.
+description: Doucmentation of Dynamsoft Camera Enhancer SDK for iOS iRegionDefinition Class.
 keywords: iRegionDefinition, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true

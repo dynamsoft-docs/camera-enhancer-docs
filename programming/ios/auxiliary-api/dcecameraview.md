@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: iOS DCECameraView Class - Dynamsoft Camera Enhancer
-description: This is the documentation - iOS DCECameraView Class page of Dynamsoft Camera Enhancer.
+description: Doucmentation of Dynamsoft Camera Enhancer SDK for iOS DCECameraView Class.
 keywords:  Camera Enhancer, iOS DCECameraView Class
 needAutoGenerateSidebar: true
 noTitleIndex: true

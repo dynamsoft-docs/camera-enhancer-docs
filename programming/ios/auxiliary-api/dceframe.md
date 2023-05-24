@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: iOS DCEFrame Class - Dynamsoft Camera Enhancer
-description: This is the documentation - iOS DCEFrame Class page of Dynamsoft Camera Enhancer.
+description: Doucmentation of Dynamsoft Camera Enhancer SDK for iOS DCEFrame Class.
 keywords:  Camera Enhancer, iOS DCEFrame Class
 needAutoGenerateSidebar: true
 noTitleIndex: true

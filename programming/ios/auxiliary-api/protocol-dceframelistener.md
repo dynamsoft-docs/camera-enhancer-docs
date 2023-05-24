@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: iOS Protocol DCEFrameListener - Dynamsoft Camera Enhancer
-description: This is the documentation - iOS Protocol DCEFrameListener page of Dynamsoft Camera Enhancer.
+description: Doucmentation of Dynamsoft Camera Enhancer SDK for iOS Protocol DCEFrameListener.
 keywords:  Camera Enhancer, iOS Protocol DCEFrameListener
 needAutoGenerateSidebar: true
 noTitleIndex: true
