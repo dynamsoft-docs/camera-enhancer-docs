@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Android DCEFrame Class - Dynamsoft Camera Enhancer
-description: This is the documentation - Android DCEFrame Class page of Dynamsoft Camera Enhancer.
+description: Doucmentation of Dynamsoft Camera Enhancer SDK for Android DCEFrame Class.
 keywords:  Camera Enhancer, Android, DCEFrame
 needAutoGenerateSidebar: true
 noTitleIndex: true

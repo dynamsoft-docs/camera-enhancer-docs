@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: iOS DCECaptureView Class - Dynamsoft Camera Enhancer
-description: This is the documentation - iOS DCECaptureView Class page of Dynamsoft Camera Enhancer.
+description: This is the documentation - iOS DCECaptureView Class page of Dynamsoft Camera Enhancer v1.0.3.
 keywords:  Camera Enhancer, iOS DCECaptureView Class
 needAutoGenerateSidebar: true
 noTitleIndex: true

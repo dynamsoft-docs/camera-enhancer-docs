@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Android CameraView Class - Dynamsoft Camera Enhancer
-description: This is the documentation - Android CameraView Class page of Dynamsoft Camera Enhancer.
+description: This is the documentation - Android CameraView Class page of Dynamsoft Camera Enhancer v1.0.3.
 keywords:  Camera Enhancer, Android, CameraView
 needAutoGenerateSidebar: true
 noTitleIndex: true

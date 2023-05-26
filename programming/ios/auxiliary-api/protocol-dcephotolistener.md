@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: iOS Protocol DCEPhotoListener - Dynamsoft Camera Enhancer
-description: This is the documentation - iOS Protocol DCEPhotoListener page of Dynamsoft Camera Enhancer.
+description: Doucmentation of Dynamsoft Camera Enhancer SDK for iOS Protocol DCEPhotoListener.
 keywords:  Camera Enhancer, iOS Protocol DCEPhotoListener
 needAutoGenerateSidebar: true
 noTitleIndex: true

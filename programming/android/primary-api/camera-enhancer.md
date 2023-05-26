@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: CameraEnhancer Class - Dynamsoft Camera Enhancer Android API references
-description: This is the documentation - Android API references - CameraEnhancer Class page of Dynamsoft Camera Enhancer.
+description: Doucmentation of Dynamsoft Camera Enhancer SDK for Android CameraEnhancer Clas.
 keywords:  Camera Enhancer, Android API references, CameraEnhancer Class
 needAutoGenerateSidebar: true
 noTitleIndex: true
