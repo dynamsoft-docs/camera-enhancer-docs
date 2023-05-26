@@ -19,6 +19,8 @@ ios: /camera-enhancer/docs/mobile/programming/ios/
 
 android: /camera-enhancer/docs/mobile/programming/android/
 
+android-old: /camera-enhancer/docs/mobile/programming-old/android/
+
 js: /camera-enhancer/docs/web/programming/javascript/
 
 flutter: /capture-vision/docs/mobile/programming/flutter/
