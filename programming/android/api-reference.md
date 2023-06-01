@@ -94,11 +94,11 @@ noTitleIndex: true
 ## Exception
 
 - [`CameraEnhancerException`]({{site.android-api-auxiliary}}camera-enhancer-exception.html)
-- [`Error Code Reference`]({{ site.mobile-enum }}errorcode.html?lang=android)
+- [`Error Code Reference`]({{ site.mobile-enum }}errorcode-android.html?lang=android)
 
 ## Interfaces
 
-- [`DCECameraStateListener`]({{ site.android-api-auxiliary }}interface-camerastatelistener.html)
+- [`DCECameraStateListener`]({{ site.android-api-auxiliary }}interface-dcecamerastatelistener.html)
 - [`DCEFrameListener`]({{ site.android-api-auxiliary }}interface-dceframelistener.html)
 - [`DCELicenseVerificationListener`]({{ site.android-api-auxiliary }}interface-licenselistener.html)
 - [`DCEPhotoListener`]({{ site.android-api-auxiliary }}interface-dcephotolistener.html)
