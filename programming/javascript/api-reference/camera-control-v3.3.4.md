@@ -24,7 +24,6 @@ breadcrumbText: Camera Control
 | [close()](#close) | Stops video streaming and releases the camera. |
 | [isOpen()](#isopen) | Returns whether the selected camera is turned on / occupied. |
 | [pause()](#pause) | Pauses video streaming without releasing the camera. |
-| [isPaused()](#ispaused) | Returns whether the video streaming is paused. |
 | [resume()](#resume) | Resumes video streaming. |
 | [setResolution()](#setresolution) | Sets the resolution of the current video input. |
 | [getResolution()](#getresolution) | Returns the resolution of the current video input. |
@@ -237,22 +236,6 @@ None.
 **Return value**
 
 None.
-
-## isPaused
-
-Returns whether the video streaming is paused.
-
-```typescript
-isPaused(): boolean;
-```
-
-**Parameters**
-
-None.
-
-**Return value**
-
-A Boolean value indicating whether the video streaming is paused.
 
 ## resume
 
