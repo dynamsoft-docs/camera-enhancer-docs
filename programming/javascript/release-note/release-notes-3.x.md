@@ -14,7 +14,7 @@ breadcrumbText: v3.x Release Notes
 
 ### Fixed
 
-* Fixed an issue where TypeScript 5 cannot locate the declaration file when importing packages.
+* Fixed an issue where TypeScript 5 cannot locate the declaration file when importing package.
 
 ### New
 
@@ -23,7 +23,7 @@ breadcrumbText: v3.x Release Notes
 ### Improved
 
 * Optimized the logic of default camera selection on iOS.
-* Modified `convertToPageCoordinates()` and `convertToClientCoordinates()` to return decimal results directly. instead of rounded results.
+* Modified `convertToPageCoordinates()` and `convertToClientCoordinates()` to return decimal results directly instead of rounded results.
 
 ## 3.3.4 (04/17/2023)
 
