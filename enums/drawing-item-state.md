@@ -1,17 +1,17 @@
 ---
 layout: default-layout
-title: CameraPosition - Dynamsoft Camera Enhancer Enumerations
-description: The enumeration CameraPosition of Dynamsoft Camera Enhancer describes the camera position.
-keywords:  Camera Position
+title: DrawingItemState - Dynamsoft Camera Enhancer Enumerations
+description: The enumeration DrawingItemState of Dynamsoft Camera Enhancer describes the state of DrawingItems.
+keywords:  DrawingItem, state
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-breadcrumbText: CameraPosition
+breadcrumbText: DrawingItemState
 ---
 
-# CameraPosition
+# DrawingItemState
 
-Enumeration `CameraPosition` describes the camera position.
+Enumeration `DrawingItemState` describes the state of DrawingItems.
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
@@ -21,6 +21,12 @@ Enumeration `CameraPosition` describes the camera position.
    >
 >
 ```javascript
+export enum EnumDrawingItemState {
+   // The state of the DrawingItem is the default state.
+   DIS_DEFAULT = 1,
+   // The state of the DrawingItem is selected.
+   DIS_SELECTED = 2
+}
 ```
 >
 ```java
@@ -48,7 +54,7 @@ typedef NS_ENUM(NSInteger, DSDrawingItemState) {
 ```
 >
 ```swift
-public enum CameraPosition : Int{
+public enum EnumDrawingItemState : Int{
    /**
     * The state of the DrawingItem is the default state.
     */

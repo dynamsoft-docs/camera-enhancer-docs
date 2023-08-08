@@ -1,22 +1,21 @@
 ---
 layout: default-layout
-title: EnhancerFeatures - Dynamsoft Camera Enhancer Enumerations
-description: The enumeration EnhancerFeatures of Dynamsoft Camera Enhancer describes the features of camera enhancer.
+title: EnhancedFeatures - Dynamsoft Camera Enhancer Enumerations
+description: The enumeration EnhancedFeatures of Dynamsoft Camera Enhancer describes the features of camera enhancer.
 keywords:  Camera enhancer features
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-breadcrumbText: EnhancerFeatures
+breadcrumbText: EnhancedFeatures
 ---
 
-# EnhancerFeatures
+# EnhancedFeatures
 
-Enumeration `EnhancerFeatures` indicates the advanced features of Dynamsoft Camera Enhancer.
+Enumeration `EnhancedFeatures` indicates the advanced features of Dynamsoft Camera Enhancer.
 
 - `Frame Filter`: The frame sharpness filter feature of DCE. By enabling this feature, the low-quality frame will be recognized and discarded automatically.
 - `Sensor Control`: The sensor filter feature of DCE. By enabling this feature, the frames will be discarded automatically while the device is shaking.
 - `Enhanced Focus`: The enhanced focus feature. DCE will support the camera in triggering auto-focus.
-- `Fast Mode`: The fast mode of DCE. By enabling the fast mode, the frames will be cropped to speed up the following processing.
 - `Auto Zoom`: The auto-zoom feature of DCE. By enabling this feature, the camera will automatically zoom in to the interest area.
 - `Smart Torch`: Add a smart torch on the UI. The torch will be hided when the environment brightness is high and displayed when the brightness is low.
 
@@ -28,6 +27,14 @@ Enumeration `EnhancerFeatures` indicates the advanced features of Dynamsoft Came
    >
 >
 ```javascript
+export enum EnumEnhancedFeatures {
+   // Enable Dynamsoft powered auto-focus control.
+   EF_ENHANCED_FOCUS = 0x04,
+   // Enable Dynamsoft powered auto-zoom in/out control
+   EF_AUTO_ZOOM = 0x10,
+   // Enable the tap-to-focus feature.
+   EF_TAP_TO_FOCUS = 0x40
+}
 ```
 >
 ```java

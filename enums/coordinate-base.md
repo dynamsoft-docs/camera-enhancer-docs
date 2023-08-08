@@ -1,27 +1,23 @@
 ---
 layout: default-layout
-title: CameraPosition - Dynamsoft Camera Enhancer Enumerations
-description: The enumeration CameraPosition of Dynamsoft Camera Enhancer describes the camera position.
-keywords:  Camera Position
+title: CoordinateBase - Dynamsoft Camera Enhancer Enumerations
+description: The enumeration CoordinateBase of Dynamsoft Camera Enhancer describes the coordinate base.
+keywords:  Coordinate base
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-breadcrumbText: CameraPosition
+breadcrumbText: CoordinateBase
 ---
 
-# CameraPosition
+# CoordinateBase
 
-Enumeration `CameraPosition` describes the camera position.
+Enumeration `CoordinateBase` describes the camera position.
 
 <div class="sample-code-prefix template2"></div>
-   >- JavaScript
    >- Android
    >- Objective-C
    >- Swift
    >
->
-```javascript
-```
 >
 ```java
 @IntDef({CB_IMAGE,CB_VIEW})

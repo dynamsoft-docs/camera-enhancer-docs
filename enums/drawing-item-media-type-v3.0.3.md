@@ -1,17 +1,18 @@
 ---
 layout: default-layout
-title: CameraPosition - Dynamsoft Camera Enhancer Enumerations
-description: The enumeration CameraPosition of Dynamsoft Camera Enhancer describes the camera position.
-keywords:  Camera Position
+title: DrawingItemMediaType - Dynamsoft Camera Enhancer Enumerations
+description: The enumeration DrawingItemMediaType of Dynamsoft Camera Enhancer describes the media type of DrawingItems.
+keywords:  DrawingItem, media type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-breadcrumbText: CameraPosition
+breadcrumbText: DrawingItemMediaType
+permalink: /enums/enum-drawing-item-media-type-v3.0.3.html
 ---
 
-# CameraPosition
+# DrawingItemMediaType
 
-Enumeration `CameraPosition` describes the camera position.
+The enumeration `DrawingItemMediaType` describes the media type of DrawingItems.
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
