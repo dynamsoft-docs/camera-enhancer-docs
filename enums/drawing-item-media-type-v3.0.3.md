@@ -7,7 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: DrawingItemMediaType
-permalink: /enums/enum-drawing-item-media-type-v3.0.3.html
+permalink: /enums/drawing-item-media-type-v3.0.3.html
 ---
 
 # DrawingItemMediaType
