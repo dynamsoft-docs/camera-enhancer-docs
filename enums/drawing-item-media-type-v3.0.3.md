@@ -15,14 +15,10 @@ permalink: /enums/enum-drawing-item-media-type-v3.0.3.html
 The enumeration `DrawingItemMediaType` describes the media type of DrawingItems.
 
 <div class="sample-code-prefix template2"></div>
-   >- JavaScript
    >- Android
    >- Objective-C
    >- Swift
    >
->
-```javascript
-```
 >
 ```java
 @Retention(RetentionPolicy.CLASS)
