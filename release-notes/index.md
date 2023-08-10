@@ -11,6 +11,26 @@ breadcrumbText: Release Note
 
 # Release Notes
 
+## 4.0
+
+> First released: 08-10-2023
+
+### Highlights
+
+* Synchronized the features of different platforms:
+  * Added take photo feature to iOS edition to capture images with higher quality.
+  * Added tip features to mobile editions to display tip messages.
+  * Extended Notes attribute to the DrawingItem classes of mobile editions to store more information.
+  * Synchronized the coordinate base of different platforms. Support coordinate base setting of the DrawingItems and tip messages.
+* API break changes:
+  * Refactored the camera-controlling APIs of the CameraEnhancer class.
+  * Refactored the UI configuration APIs.
+  * Other minor changes on the API names and behaviors.
+
+| Versions | Available Editions |
+| -------- | ------------------ |
+| 4.0.0 | [Android]({{ site.android }}release-note/release-notes-4.x.html#400-08102023) / [iOS]({{ site.ios }}release-note/release-notes-4.x.html#400-08102023) |
+
 ## 3.0
 
 > First released: 07-27-2022

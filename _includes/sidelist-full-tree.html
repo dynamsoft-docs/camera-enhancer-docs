@@ -1,6 +1,17 @@
-{%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-introduction.html" -%}
-{%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-programming.html" -%}
-{%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-useful.html" -%}
-<!-- {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-release-notes.html" -%} -->
-<!-- {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-license-activation.html" -%}
-{%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-faq.html" -%} -->
+<li>
+    <a href="{{ site.introduction }}" class="otherLinkColour">Introduction</a>
+</li>
+<li class="category">DEVELOPMENT</li>
+<li>
+    <a target="_blank" href="{{ site.js }}" class="otherLinkColour refreshLink">Web (Client Side)</a></li>
+<li>
+    <a class="otherLinkColour">Mobile</a>
+    <ul>
+        <li><a target="_blank" href="{{ site.android }}" class="otherLinkColour refreshLink">Android</a></li>
+        <li><a target="_blank" href="{{ site.ios }}" class="otherLinkColour refreshLink">iOS</a></li>
+    </ul>
+</li>
+<li class="category">USEFUL RESOURCES</li>
+{%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-release-notes.html" -%}
+{%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-license-activation.html" -%}
+{%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-faq.html" -%}
