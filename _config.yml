@@ -61,7 +61,7 @@ plugins:
   - jemoji
   - jekyll-sitemap
 
-edition: core
+edition: algorithm
 
 defaults:
   - scope:
