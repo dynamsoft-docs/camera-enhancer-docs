@@ -30,51 +30,38 @@ breadcrumbText: License Initialization
 
 The following code snippets are using the public trial key to initialize the license. You can replace the public trial key with your own license key.
 
-1. Include `DynamsoftLicense` library.
+**Android Code Snippet**
 
-2. Add the following code:
-
-<div class="sample-code-prefix"></div>
->- Java(Android)
->- Objective-C
->- Swift
->
->
 ```java
-LicenseManager.initLicense(LICENSE, this, (isSuccess, error) -> {
-   if (!isSuccess) {
-          Log.e(TAG, "InitLicense Error: " + error);
-   }
+// The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a time-limited public trial license.
+// After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce to request an extension.
+CameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELicenseVerificationListener() {
+    @Override
+    public void DCELicenseVerificationCallback(boolean b, Exception e) {
+        if(!b && e != null){
+            e.printStackTrace();
+        }
+    }
 });
 ```
->
+
+**Objective-C Code Snippet**
+
 ```objc
-@interface AppDelegate ()<DBRLicenseVerificationListener>
-...
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *launchOptions {
-   [DSLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"verificationDelegate:self];
-   ...
-}
-- (void)onLicenseVerified:(BOOL)isSuccess error:(NSError *)error {
-    [self verificationCallback:error];
+// The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a time-limited public trial license.
+// After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce to request an extension.
+[DynamsoftCameraEnhancer initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+- (void)DCELicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
 }
 ```
->
+
+**Swift Code Snippet**
+
 ```swift
-class AppDelegate: UIResponder, UIApplicationDelegate, DBRLicenseVerificationListener {
-   ...
-   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:[UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-          ...
-          LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",verificationDelegate: self)
-          ...
-   }
-   func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
-          if !isSuccess {
-             if let error = error {
-                    print("\(error.localizedDescription)")
-             }
-          }
-   }
+// The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a time-limited public trial license.
+// After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce to request an extension.
+DynamsoftCameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",verificationDelegate:self)
+func dceLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
 }
 ```
 
