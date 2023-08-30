@@ -25,7 +25,7 @@ breadcrumbText: Enumerations Error code
 | `DCE_LICENSE_INVALID` | `EnumCameraErrorCode_LICENSE_INVALID` | -10001 | The licence is invalid. |
 | `DCE_LICENSE_EXPIRED` | `EnumCameraErrorCode_LICENSE_EXPIRED` | -10002 | The licence has expired. |
 | `DCE_CAMERA_MODULE_NOT_EXIST` | `EnumCameraErrorCode_CAMERA_MODULE_NOT_EXIST` | -10003 | Camera module does not exist. |
-| `DCE_FILE_NOT_FOUND` | `EnumCameraErrorCode_FILE_NOT_FOUND` | -10004 | Failed to access the fail path. |
+| `DCE_FILE_NOT_FOUND` | `EnumCameraErrorCode_FILE_NOT_FOUND` | -10004 | Failed to access the file path. |
 | `DCE_JSON_PARSE_FAILED` | `EnumCameraErrorCode_JSON_PARSE_FAILED` | -10005 | Failed to parse the JSON data. |
 | `DCE_CAMERA_ID_NOT_EXIST` | `EnumCameraErrorCode_CAMERA_ID_NOT_EXIST` | -10006 | The input value does not exist in the camera ID list. |
 | `DCE_PARAMETER_VALUE_INVALID` | `EnumCameraErrorCode_PARAMETER_VALUE_INVALID` | -10038 | The input parameter is invalid. |

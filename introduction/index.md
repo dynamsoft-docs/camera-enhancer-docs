@@ -15,6 +15,7 @@ Dynamsoft Camera Enhancer (DCE) is an SDK specially designed to enhance camera f
 
 ## Main features
 
+
 ### Video Buffer
 
 DCE video buffer is the key feature that speeds up frame acquisition. It also acts as the administrator that takes over the video frames processed by other DCE functions. The main responsibilities of the video buffer are to:
@@ -70,6 +71,18 @@ Last but not least, we incorporated camera control APIs in the SDK. The benefits
 - Enable users to add camera functionality with a few lines of code
 - Unified experience on iOS/Android
 
+In summary,
+
+| Feature List           | Pricing                                           |
+|------------------------|---------------------------------------------------|
+| Regular Camera Control | Free                                              |
+| Video Buffer           | Free                                              |
+| Auto Zoom              | Advanced feature that requires a license.         |
+| Auto Focus             | Advanced feature that requires a license.         |
+| Frame Cropping         | Advanced feature that requires a license.         |
+| Frame Filtering        | Advanced feature that requires a license.         |
+
+
 With these features, users can easily integrate the camera and enable certain features when required so that the rest of the application logic can get high-quality images to process, which results in:
 
 - Speed up on barcode or text reading.
@@ -95,8 +108,6 @@ Bounded up with camera performance, it is always a huge challenge for camera-rel
 
 Dynamsoft Camera Enhancer is now available for the following programming languages:
 
-- **JavaScript** for Browsers (only limited features at present)
-- **Java** for Android
-- **Objective-C** & **Swift** for iOS
-
-[Get started with Dynamsoft Camera Enhancer >](../programming/index.md)
+- [**JavaScript**]({{site.js}}) for Browsers (with limited features at present)
+- [**Java**]({{site.android}}) for Android
+- [**Objective-C** & **Swift**]({{site.ios}}) for iOS
