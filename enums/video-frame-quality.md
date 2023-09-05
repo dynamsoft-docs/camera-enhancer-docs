@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title:VideoFrameQuality - Dynamsoft Core Enumerations
+title: VideoFrameQuality - Dynamsoft Core Enumerations
 description: The enumeration VideoFrameQuality of Dynamsoft Core describes the quality of video frames.
 keywords: Video frame quality
 needGenerateH3Content: true
