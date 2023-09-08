@@ -91,7 +91,7 @@ breadcrumbText: Release Note
 | 2.1.4 | [Android]({{ site.android }}release-note/release-notes-2.x.html#214-05262022){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#214-05262022){:target="_blank"} |
 | 2.1.3 | [Android]({{ site.android }}release-note/release-notes-2.x.html#213-03022022){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#213-03022022){:target="_blank"} |
 | 2.1.1 | [Android]({{ site.android }}release-note/release-notes-2.x.html#211-12282021){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#211-12282021){:target="_blank"} |
-| 2.1.0 | [Android]({{ site.android }}release-note/release-notes-2.x.html#210-12162021){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#210-12162021){:target="_blank"} / [JavaScript]({{ site.js-rn }}release-notes-2.x.html#210-01202022)|
+| 2.1.0 | [Android]({{ site.android }}release-note/release-notes-2.x.html#210-12162021){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#210-12162021){:target="_blank"} / [JavaScript]({{ site.js-rn }}release-notes-2.x.html#210-01202022){:target="_blank"} |
 
 &nbsp; 
 
