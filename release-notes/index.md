@@ -29,7 +29,7 @@ breadcrumbText: Release Note
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 4.0.0 | [Android]({{ site.android }}release-note/release-notes-4.x.html#400-08102023) / [iOS]({{ site.ios }}release-note/release-notes-4.x.html#400-08102023) |
+| 4.0.0 | [Android]({{ site.android }}release-note/release-notes-4.x.html#400-08102023){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-4.x.html#400-08102023){:target="_blank"} / [JavaScript]({{ site.js-rn }}release-notes-4.x.html#400-08242023){:target="_blank"} |
 
 ## 3.0
 
@@ -41,16 +41,16 @@ breadcrumbText: Release Note
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 3.3.5 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#335-08022023) |
-| 3.3.4 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#334-04172023) |
-| 3.3.3 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#333-04112023) |
-| 3.3.2 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#332-04042023) |
-| 3.3.1 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#331-02202023) |
-| 3.3.0 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#330-02092023) |
-| 3.2.0 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#320-12132022) |
-| 3.1.0 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#310-10202022) |
-| 3.0.1 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#301-08042022) |
-| 3.0.0 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#300-07272022) |
+| 3.3.5 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#335-08022023){:target="_blank"} |
+| 3.3.4 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#334-04172023){:target="_blank"} |
+| 3.3.3 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#333-04112023){:target="_blank"} |
+| 3.3.2 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#332-04042023){:target="_blank"} |
+| 3.3.1 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#331-02202023){:target="_blank"} |
+| 3.3.0 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#330-02092023){:target="_blank"} |
+| 3.2.0 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#320-12132022){:target="_blank"} |
+| 3.1.0 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#310-10202022){:target="_blank"} |
+| 3.0.1 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#301-08042022){:target="_blank"} |
+| 3.0.0 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#300-07272022){:target="_blank"} |
 
 &nbsp;
 
@@ -64,16 +64,16 @@ breadcrumbText: Release Note
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 2.3.20 | [iOS]({{ site.ios }}release-note/release-notes-2.x.html#2320-03272023) |
-| 2.3.12 | [iOS]({{ site.ios }}release-note/release-notes-2.x.html#2312-03162023) |
-| 2.3.11 | [Android]({{ site.android }}release-note/release-notes-2.x.html#2311-02142023) / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#2311-01102023) |
-| 2.3.10 | [Android]({{ site.android }}release-note/release-notes-2.x.html#2310-12132022) / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#2310-12132022) |
-| 2.3.5 | [Android]({{ site.android }}release-note/release-notes-2.x.html#235-11042022) / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#235-11152022) |
-| 2.3.4 | [Android]({{ site.android }}release-note/release-notes-2.x.html#234-09222022) / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#234-11042022) |
-| 2.3.3 | [Android]({{ site.android }}release-note/release-notes-2.x.html#233-08182022) / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#233-09222022) |
-| 2.3.2 | [JavaScript]({{ site.js-rn }}release-notes-2.x.html#232-03282022) / [Android]({{ site.android }}release-note/release-notes-2.x.html#232-08022022) / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#232-08022022) |
-| 2.3.1 | [JavaScript]({{ site.js-rn }}release-notes-2.x.html#231-03212022) / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#231-07112022) |
-| 2.3.0 | [Android]({{ site.android }}release-note/release-notes-2.x.html#230-06282022) / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#230-06282022) |
+| 2.3.20 | [iOS]({{ site.ios }}release-note/release-notes-2.x.html#2320-03272023){:target="_blank"} |
+| 2.3.12 | [iOS]({{ site.ios }}release-note/release-notes-2.x.html#2312-03162023){:target="_blank"} |
+| 2.3.11 | [Android]({{ site.android }}release-note/release-notes-2.x.html#2311-02142023){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#2311-01102023){:target="_blank"} |
+| 2.3.10 | [Android]({{ site.android }}release-note/release-notes-2.x.html#2310-12132022){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#2310-12132022){:target="_blank"} |
+| 2.3.5 | [Android]({{ site.android }}release-note/release-notes-2.x.html#235-11042022){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#235-11152022){:target="_blank"} |
+| 2.3.4 | [Android]({{ site.android }}release-note/release-notes-2.x.html#234-09222022){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#234-11042022){:target="_blank"} |
+| 2.3.3 | [Android]({{ site.android }}release-note/release-notes-2.x.html#233-08182022){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#233-09222022){:target="_blank"} |
+| 2.3.2 | [JavaScript]({{ site.js-rn }}release-notes-2.x.html#232-03282022){:target="_blank"} / [Android]({{ site.android }}release-note/release-notes-2.x.html#232-08022022){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#232-08022022){:target="_blank"} |
+| 2.3.1 | [JavaScript]({{ site.js-rn }}release-notes-2.x.html#231-03212022){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#231-07112022){:target="_blank"} |
+| 2.3.0 | [Android]({{ site.android }}release-note/release-notes-2.x.html#230-06282022){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#230-06282022){:target="_blank"} |
 
 &nbsp;
 
@@ -88,10 +88,10 @@ breadcrumbText: Release Note
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 2.1.4 | [Android]({{ site.android }}release-note/release-notes-2.x.html#214-05262022) / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#214-05262022) |
-| 2.1.3 | [Android]({{ site.android }}release-note/release-notes-2.x.html#213-03022022) / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#213-03022022) |
-| 2.1.1 | [Android]({{ site.android }}release-note/release-notes-2.x.html#211-12282021) / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#211-12282021) |
-| 2.1.0 | [Android]({{ site.android }}release-note/release-notes-2.x.html#210-12162021) / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#210-12162021) / [JavaScript]({{ site.js-rn }}release-notes-2.x.html#210-01202022)|
+| 2.1.4 | [Android]({{ site.android }}release-note/release-notes-2.x.html#214-05262022){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#214-05262022){:target="_blank"} |
+| 2.1.3 | [Android]({{ site.android }}release-note/release-notes-2.x.html#213-03022022){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#213-03022022){:target="_blank"} |
+| 2.1.1 | [Android]({{ site.android }}release-note/release-notes-2.x.html#211-12282021){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#211-12282021){:target="_blank"} |
+| 2.1.0 | [Android]({{ site.android }}release-note/release-notes-2.x.html#210-12162021){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#210-12162021){:target="_blank"} / [JavaScript]({{ site.js-rn }}release-notes-2.x.html#210-01202022)|
 
 &nbsp; 
 
@@ -108,7 +108,7 @@ breadcrumbText: Release Note
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 2.0.0 | [JavaScript]({{ site.js-rn }}release-notes-2.x.html#200-10202021) / [Android]({{ site.android }}release-note/release-notes-2.x.html#200-10192021) / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#200-10192021) |
+| 2.0.0 | [JavaScript]({{ site.js-rn }}release-notes-2.x.html#200-10202021){:target="_blank"} / [Android]({{ site.android }}release-note/release-notes-2.x.html#200-10192021){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-2.x.html#200-10192021){:target="_blank"} |
 
 &nbsp; 
 
@@ -135,8 +135,8 @@ breadcrumbText: Release Note
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 1.0.3 | [Android]({{ site.android }}release-note/release-notes-1.x.html#103-07202021) / [iOS]({{ site.ios }}release-note/release-notes-1.x.html#103-07202021) |
-| 1.0.1 | [Android]({{ site.android }}release-note/release-notes-1.x.html#101-06102021) / [iOS]({{ site.ios }}release-note/release-notes-1.x.html#101-06102021) |
-| 1.0.0 | [Android]({{ site.android }}release-note/release-notes-1.x.html#100-04292021) / [iOS]({{ site.ios }}release-note/release-notes-1.x.html#100-04292021) |
+| 1.0.3 | [Android]({{ site.android }}release-note/release-notes-1.x.html#103-07202021){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-1.x.html#103-07202021){:target="_blank"} |
+| 1.0.1 | [Android]({{ site.android }}release-note/release-notes-1.x.html#101-06102021){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-1.x.html#101-06102021){:target="_blank"} |
+| 1.0.0 | [Android]({{ site.android }}release-note/release-notes-1.x.html#100-04292021){:target="_blank"} / [iOS]({{ site.ios }}release-note/release-notes-1.x.html#100-04292021){:target="_blank"} |
 
 <div class="fold-panel-end"></div>
