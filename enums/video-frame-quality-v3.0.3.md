@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: FrameQuality - Dynamsoft Camera EnhancerEnumerations
-Description: The enumeration FrameQuality of Dynamsoft Camera Enhancerdescribes the quality of video frames.
-Keywords: Video frame quality
+title: FrameQuality - Dynamsoft Camera EnhancerEnumerations
+description: The enumeration FrameQuality of Dynamsoft Camera Enhancerdescribes the quality of video frames.
+keywords: Video frame quality
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

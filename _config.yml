@@ -20,6 +20,7 @@ ios: /camera-enhancer/docs/mobile/programming/ios/
 android: /camera-enhancer/docs/mobile/programming/android/
 
 js: /camera-enhancer/docs/web/programming/javascript/
+js-rn: /camera-enhancer/docs/web/programming/javascript/release-note/
 
 flutter: /capture-vision/docs/mobile/programming/flutter/
 
