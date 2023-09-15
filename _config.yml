@@ -61,6 +61,11 @@ baseurl: "/camera-enhancer/docs/core"
 plugins:
   - jemoji
   - jekyll-sitemap
+  - jekyll-webp
+  - jekyll-relative-links
+  - jekyll-redirect-from
+  - jekyll-readme-index
+  - jekyll-seo-tag
 
 edition: algorithm
 
