@@ -9,6 +9,8 @@ breadcrumbText: Enumerations HardwareUtil
 
 # Enumeration HardwareUtil
 
+> You are viewing a history document page of Dynamsoft Camera Enhancer v1.x.
+
 The `HardwareUtil` is an Android enumeration that stores the device level.
 
 **Related APIs**

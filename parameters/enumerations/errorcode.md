@@ -9,6 +9,8 @@ breadcrumbText: Enumerations Error code
 
 # Enumerations Error code
 
+> You are viewing a history document page of Dynamsoft Camera Enhancer v2.x.
+
 ## Declarations
 
 | Language | Declaration |

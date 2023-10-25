@@ -9,22 +9,14 @@ breadcrumbText: License Initialization
 
 # License initialization
 
-> NOTE
->
-> The JavaScript edition doesn't require a license as of version 2.0.3.
->
-> The method `initLicenseFromDLS` and `DMDLSSettingParameters` are no longer available from version 2.0.
->
-> To initialize the license for 2.0 or higher versions, please use the new license item illustrated on this page.
-
 ## Get a trial key
 
-- A time-limited public trial key is available for every new device for the first use of Dynamsoft Camera Enhancer. The public trial key is the default key used in samples. You can also find the public trial key on the following parts of this page.
-- If your free key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dce" target="_blank">Private Trial License Page</a> to get an extension.
+* A time-limited public trial key is available for every new device for the first use of Dynamsoft Camera Enhancer. The public trial key is the default key used in samples. You can also find the public trial key on the following parts of this page.
+* If your free key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?package=mobile&product=dce" target="_blank">Private Trial License Page</a> to get an extension.
 
 ## Get a full license
 
-- [Contact us](https://www.dynamsoft.com/company/contact/)  to purchase a full license
+* [Contact us](https://www.dynamsoft.com/company/contact/)  to purchase a full license
 
 ## Initialize the license
 
@@ -41,93 +33,42 @@ The following code snippets are using the public trial key to initialize the lic
 >
 >
 ```java
-LicenseManager.initLicense(LICENSE, this, (isSuccess, error) -> {
-   if (!isSuccess) {
-          Log.e(TAG, "InitLicense Error: " + error);
-   }
+LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this, (isSuccess, error) -> {
+    if (!isSuccess) {
+        error.printStackTrace();
+    }
 });
 ```
 >
 ```objc
-@interface AppDelegate ()<DBRLicenseVerificationListener>
-...
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *launchOptions {
-   [DSLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"verificationDelegate:self];
-   ...
+@interface AppDelegate () <DSLicenseVerificationListener>
+@end
+@implementation AppDelegate
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Override point for customization after application launch.
+    [DSLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+    return YES;
 }
-- (void)onLicenseVerified:(BOOL)isSuccess error:(NSError *)error {
-    [self verificationCallback:error];
+- (void)onLicenseVerified:(BOOL)isSuccess error:(nullable NSError *)error {
+    if (!isSuccess && error != nil) {
+        NSLog(@"error: %@", error);
+    }
 }
 ```
 >
 ```swift
-class AppDelegate: UIResponder, UIApplicationDelegate, DBRLicenseVerificationListener {
-   ...
-   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:[UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-          ...
-          LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",verificationDelegate: self)
-          ...
-   }
-   func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
-          if !isSuccess {
-             if let error = error {
-                    print("\(error.localizedDescription)")
-             }
-          }
-   }
-}
-```
-
-## Optional Codes -- Display License Verification Message on the UI
-
-You can add the following code to the `DCELicenseVerificationCallback` to display the error message on the UI when the license verification is failed.
-
-**Android Code Snippet**
-
-```java
-CameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELicenseVerificationListener() {
-    @Override
-    public void DCELicenseVerificationCallback(boolean isSuccess, final Exception e) {
-        if (!isSuccess) {
-            e.printStackTrace();
-            MainActivity.this.runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    Toast ts = Toast.makeText(getBaseContext(), "error:"+((CameraEnhancerException)e).getErrorCode()+ " "+((CameraEnhancerException)e).getMessage(), Toast.LENGTH_LONG);
-                    ts.show();
-                }
-            });
-        }
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate, LicenseVerificationListener {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
+        return true
     }
-});
-```
-
-**Objective-C Code Snippet**
-
-```objc
-[DynamsoftCameraEnhancer initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
-- (void)DCELicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
-    if(error != nil){
-        dispatch_async(dispatch_get_main_queue(), ^{
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Server license verify failed" message:error.userInfo[NSUnderlyingErrorKey] preferredStyle:UIAlertControllerStyleAlert];
-            [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
-            [self presentViewController:alert animated:YES completion:nil];
-        });
-    }
-}
-```
-
-**Swift Code Snippet**
-
-```swift
-DynamsoftCameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",verificationDelegate:self)
-func dceLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
-    let err = error as NSError?
-    if(error != nil){
-        DispatchQueue.main.async {
-            let alert = UIAlertController(title: "Server license verify failed", message: err!.userInfo[NSUnderlyingErrorKey] as? String, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+    func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
+        if !isSuccess {
+            if let error = error {
+                print("\(error.localizedDescription)")
+            }
         }
     }
 }
