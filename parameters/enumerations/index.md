@@ -8,6 +8,8 @@ breadcrumbText: Enumerations
 ---
 # Enumerations
 
+> You are viewing a history document page of Dynamsoft Camera Enhancer v2.x.
+
 - [`EnumCameraPosition`]({{ site.enumerations }}enum-camera-position.html)
 - [`EnumCameraState`]({{ site.enumerations }}enum-camera-state.html)
 - [`EnumDCEErrorCode`]({{ site.enumerations }}errorcode.html)
