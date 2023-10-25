@@ -31,7 +31,6 @@ The following code snippets are using the public trial key to initialize the lic
 >- Objective-C
 >- Swift
 >
->
 ```java
 LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this, (isSuccess, error) -> {
     if (!isSuccess) {
