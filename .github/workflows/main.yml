@@ -31,3 +31,4 @@ jobs:
       doc-repo: camera-enhancer-docs
       doc-url: camera-enhancer/docs/core
     secrets: inherit
+
