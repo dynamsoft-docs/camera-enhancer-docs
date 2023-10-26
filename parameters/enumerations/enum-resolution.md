@@ -9,6 +9,8 @@ breadcrumbText: Enumerations Resolution
 
 # EnumResolution
 
+> You are viewing a history document page of Dynamsoft Camera Enhancer v2.x.
+
 ## Declarations
 
 | Language | Declaration |

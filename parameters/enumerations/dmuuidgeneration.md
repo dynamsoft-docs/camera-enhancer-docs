@@ -9,6 +9,8 @@ breadcrumbText: Enumerations Camera DMUUID Generation Method
 
 # Camera DMUUID Generation Method
 
+> You are viewing a history document page of Dynamsoft Camera Enhancer v1.x.
+
 ## Declarations
 
 | Language | Declaration |
