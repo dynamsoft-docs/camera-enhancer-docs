@@ -42,6 +42,7 @@ breadcrumbText: Release Note
 
 | Versions | Available Editions |
 | -------- | ------------------ |
+| 3.3.9 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#339-12062023){:target="_blank"} |
 | 3.3.8 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#338-10122023){:target="_blank"} |
 | 3.3.7 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#337-10112023){:target="_blank"} |
 | 3.3.6 | [JavaScript]({{ site.js-rn }}release-notes-3.x.html#336-09132023){:target="_blank"} |
