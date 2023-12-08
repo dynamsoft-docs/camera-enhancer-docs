@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: ErrorCode - Dynamsoft Core Enumerations
-description: The enumeration ErrorCode of Dynamsoft Core describes all error codes.
+title: ErrorCode - Dynamsoft Core Enumerations Camera Enhancer Documents
+description: The ErrorCode of Dynamsoft Camera Enhancer and other Dynamsoft Capture Vision modules.
 keywords: Error code
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
