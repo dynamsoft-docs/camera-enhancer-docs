@@ -15,56 +15,65 @@ Dynamsoft Camera Enhancer (DCE) is an SDK specially designed to enhance camera f
 
 ## Main features
 
+### Enhance Video Input
 
-### Video Buffer
+#### Video Buffer
 
-DCE video buffer is the key feature that speeds up frame acquisition. It also acts as the administrator that takes over the video frames processed by other DCE functions. The main responsibilities of the video buffer are to:
+DCE internally maintains a video buffer, which allows the image processing products to assess the video frames instantly when processing the video streaming. It reduce the time consumption of frame acquisition and improves the stability of video multi-frame processing.
 
-- Temporarily store the filtered and cropped video frames.
-- Transfer a new frame immediately when the application finishes the processing of the current frame.
-- Enable the applications to skip the time-consuming frames to release the occupancy of computation resources.
+The video buffer feature of DCE is inherited from the ImageSourceAdapter (ISA) which is the standard input interface of Dynamsoft Capture Vision (DCV).
 
-When DCE is embedded in an application, the video frames will be preprocessed and temporarily saved in the DCE frame queue. Each time when the application completed the current process, instead of waiting for the camera to transfer a new frame, the application can fetch a new frame from the frame queue immediately. In addition, the frame queue also provides a new solution on the timing out system. By monitoring and controlling the number of frames in the queue, users can enable the application to abandon the current processing frame and restart the scan. The frame queue sharply reduces the lag in the scanning process and it will finally result in a stable and fluent user experience.
+#### Frame Filtering
 
-### Frame Filtering
+There are two kinds of filtering features for you to skip the blurry video frames:
 
-DCE can implement the sensor filter and frame sharpness filter on the camera video frames. The blurred frames will be skipped in the image reading process. The filter methods include:
+- Sensor filter: Filter out all the video frames produced when the device is shaking.
+- Frame sharpness filter: Filter out the blurry video frames with the frame quality evaluation algorithm (less than 10ms per image).
 
-- Sensor filter on mobile devices.
-- Frame sharpness filter on all kinds of devices.
+By enabling the frame filtering features, you can:
 
-The frame filter prevents the frame processing algorithm from spending too much time scanning blurry frames. This benefits the application on improves its working efficiency and accuracy.
-
-> Note:
-> Frame filtering is only available for mobile editions. A valid license is required when using this feature.
-
-### Frame Cropping
-
-**Fast mode** is the pattern in which we process frames by cropping them. We call this pattern `Fast mode` because it sharply reduces the scan area and results in faster processing speed. If the fast mode is enabled, frames will be cropped in four different cropping methods and they will be implemented periodically.
-
-<div align="center">
-    <p><img src="overview/assets/Fast-mode.png" width="70%" alt="Fast-mode"></p>
-    <p>How fast mode is cropping frames</p>
-</div>
+- Prevent the long-time-consumption on processing the blurry image.
+- Improve the accuracy of barcode decoding and text line recognizing.
+- Improve the quality of the normalize document image.
 
 > Note:
-> Frame cropping is only available for mobile editions. A valid license is required when using this feature.
+> A valid license is required when using this feature.
 
-### Auto Focus
+#### Enhanced Focus
 
-For the low-end cameras, DCE enables users to make autofocus settings on controlling the camera proactively so that we will not stay on the blurry frames. Other focus settings are also available for users to deploy more personalized and advanced camera focus settings.
+Generally, auto-focus is supported by the majority of mobile devices. The ability to use the system auto-focus is kept when working with DCE so that you don't need to worry about the focus issues. For the low-end devices without auto-focus ability, DCE provides several additional focus modes:
+
+- Continous focus with a user-define interval.
+- Focus when the video frame quality decreased.
+- Tap to focus.
 
 > Note:
-> Auto focus is only available for mobile editions. A valid license is required when using this feature.
+> A valid license is required when using this feature.
 
-### Auto Zoom
+#### Auto Zoom
 
 If the barcode reader is enabled at the same time when DCE is working, we can use the intermediate result of the barcode reader to predetermine the area of interest. DCE will let the camera zoom in to approach the interest area on the occasion that the system did not receive the final result but the intermediate result is available. The zoom factor will be reset if the application decodes on the barcode successfully.
 
-> Note:
-> Auto zoom is only available for mobile editions. A valid license is required when using this feature.
+<div align="center">
+   <p><img src="../assets/auto-zoom.gif" alt="auto-zoom" width="20%" /></p>
+   <p>Figure 1 – Auto-zoom Feature</p>
+</div>
 
-### Regular Camera Control
+> Note:
+> A valid license is required when using this feature.
+
+#### Smart Torch
+
+The torch light is helpful to support the image processing when the environment light is dark. There are 3 way for DCE powered camera to access the torch light:
+
+- Use torch control APIs to turn on/off the torch light.
+- Add a torch button with `setTorchButton`. You can also configure the size, position, and image of the button.
+- Enable the `smart-torch` feature so that the torch button appears only when the environment light is low.
+
+> Note:
+> A valid license is required when using `smart-torch` feature.
+
+#### Regular Camera Control
 
 Last but not least, we incorporated camera control APIs in the SDK. The benefits of these APIs are:
 
@@ -78,10 +87,10 @@ In summary,
 | Regular Camera Control | Free                                              |
 | Video Buffer           | Free                                              |
 | Auto Zoom              | Advanced feature that requires a license.         |
-| Auto Focus             | Advanced feature that requires a license.         |
+| Enhanced Focus         | Advanced feature that requires a license.         |
 | Frame Cropping         | Advanced feature that requires a license.         |
 | Frame Filtering        | Advanced feature that requires a license.         |
-
+| Smart torch            | Advanced feature that requires a license.         |
 
 With these features, users can easily integrate the camera and enable certain features when required so that the rest of the application logic can get high-quality images to process, which results in:
 
@@ -90,11 +99,36 @@ With these features, users can easily integrate the camera and enable certain fe
 - More convenient timing out system
 - High standard camera control.
 
+### Interactive UI View
+
+Two view classes are available for different usage scenarios.
+
+#### CameraView for Video streaming processing
+
+- Display the real-time video streaming.
+- Visualize the `CapturedResults` on the view with simple code.
+- Useful components that can be easily added to the view.
+
+#### ImageEditorView for single Image Processing
+
+Start from v3.x, `ImageEditorView` is available for users to draw editable UI elements to auxiliary the recognition of the image.
+
+- Display the image to process.
+- Visualize the `CapturedResults` on the view with simple code.
+- Manually edit the result location to further improve the recognition accuracy.
+
+<div align="center">
+   <p><img src="../assets/dce-ddn-view.gif" alt="EditorView" width="20%" /></p>
+   <p>Figure 2 – Scan and Edit on the ImageEditorView</p>
+</div>
+
 ## Usage Scenarios
 
-### Continuous barcode decoding
+### Enhanced Video Streaming Processing
 
-In traditional scan modes, the scanning process are always intermittent because the scanner can't continue the scan process before it receives a new frame from the camera. DCE frame queue tried to make this intermittent process continuous. The frame queue takes over and saves the new frames captured during the time that the scanner is processing on the former frame. Immediately when the former frame is processed, the scanner will fetch the newest frame in the queue and restart the scanning process. These behaviors will make the scanning experience of the application more fluent and stable.
+DCE aims at improving the user experience on video streaming processing. The camera controlling APIs and the advanced camera features enable users to customize the video source. You can use the focus, zoom, and resolution control to directly improve the video sharpness so that the image processing accuracy will be insured. You can also implement the pre-processings like set a scan region or enable the frame filter so that the image processing libraries will focus on the more valuable image data.
+
+The DCE views ameliorate the video streaming processing on another aspect. DCE views are able to receive and recognize the results output by Dynamsoft Capture Vision. With the view configuring APIs, you can easily visualize the captured results on the view like highlighting the decoded barcodes or the detected document pages. The views are designed to be interactive. You can use the preset events of DCE UI elements or add your customized events to further improve the experience of your video streaming processing.
 
 ### Long-distance decoding
 
