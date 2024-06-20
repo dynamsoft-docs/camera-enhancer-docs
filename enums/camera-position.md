@@ -24,9 +24,9 @@ Enumeration `CameraPosition` describes the camera position.
 @Retention(RetentionPolicy.CLASS)
 public @interface EnumCameraPosition {
    // The back-facing camera.
-   public static final int CP_FRONT= 0;
+   public static final int CP_BACK= 0;
    // The front-facing camera.
-   public static final int CP_BACK = 1;
+   public static final int CP_FRONT = 1;
 }
 ```
 >
@@ -36,7 +36,7 @@ typedef NS_ENUM(NSInteger, DSCameraPosition)
    /** The back-facing camera. */
    EnumCameraPositionBack = 0,
    /** The front-facing camera. */
-   EnumCameraPositionBack = 1
+   EnumCameraPositionFront = 1
 };
 ```
 >
