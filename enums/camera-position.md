@@ -34,9 +34,9 @@ public @interface EnumCameraPosition {
 typedef NS_ENUM(NSInteger, DSCameraPosition)
 {
    /** The back-facing camera. */
-   EnumCameraPositionBack = 0,
+   DSCameraPositionBack = 0,
    /** The front-facing camera. */
-   EnumCameraPositionFront = 1
+   DSCameraPositionFront = 1
 };
 ```
 >
