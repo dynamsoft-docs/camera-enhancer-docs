@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Introduction - Dynamsoft Camera Enhancer
-description: This is the documentation - introduction page of Dynamsoft Camera Enhancer.
+description: "Learn about Introduction in Dynamsoft Camera Enhancer and how it supports document capture, barcode scanning, or recognition workflows for modern web."
 keywords:  Camera Enhancer, introduction
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
