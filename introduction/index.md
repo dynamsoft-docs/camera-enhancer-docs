@@ -137,11 +137,3 @@ With the help of DCE, users no longer need to manually approach the barcode area
 ### Low-end devices
 
 Bounded up with camera performance, it is always a huge challenge for camera-related applications to perform well on low-end devices. DCE is breaking through these hardware issues by enabling high-standard autofocus and frame filter functions. DCE focus APIs enable users to apply high-standard focus settings, which help the devices to capture higher standard images. In the meanwhile, the frame filter pattern of DCE enables the application to skip processing the low-quality frames.
-
-## Programming language
-
-Dynamsoft Camera Enhancer is now available for the following programming languages:
-
-- [**JavaScript**]({{site.js}}) for Browsers (with limited features at present)
-- [**Java**]({{site.android}}) for Android
-- [**Objective-C** & **Swift**]({{site.ios}}) for iOS
